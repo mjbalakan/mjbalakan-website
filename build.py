@@ -193,6 +193,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 .statline{margin-top:26px;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted);font-size:.86rem;font-variant-numeric:tabular-nums}
 .lead .ai{font-weight:inherit;font-size:1.15em}
+.spot{align-items:start}
+.spot .side{display:flex;flex-direction:column;gap:10px;min-width:0}
+.spot .side .results{margin:0}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -368,17 +371,13 @@ def build_index():
 
 <main>
 <section id="research"><div class="wrap">
+<div class="sec-head" style="max-width:none"><span class="mono">Research · {E(sp['span'])}</span>
+<h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem)">{E(sp['title'])}</h2></div>
 <div class="spot">
 <div class="txt">
-<span class="mono">Research · {E(sp['span'])}</span>
-<h2>{E(sp['title'])}</h2>
 <p>{E(sp['text'])}</p>
-<ul class="results">{results}</ul>
 </div>
-<div class="visual">
-<figure><img src="img/{E(sp['device']['src'])}" alt="{E(sp['device']['alt'])}" width="471" height="358"><figcaption class="mono">{E(sp['device']['cap'])}</figcaption></figure>
-<figure><img src="img/{E(sp['data']['src'])}" alt="{E(sp['data']['alt'])}" width="722" height="578" loading="lazy"><figcaption class="mono">{E(sp['data']['cap'])}</figcaption></figure>
-</div>
+<div class="side"><span class="mono">Key results</span><ul class="results">{results}</ul></div>
 </div>
 <figure class="lab"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112" loading="lazy"><figcaption>{E(lab['cap'])}</figcaption></figure>
 <div class="earlier">
