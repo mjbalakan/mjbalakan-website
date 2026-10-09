@@ -1,99 +1,256 @@
 {
   "url": "https://www.mjbalakan.com",
   "name": "Mohammad Javadi Balakan",
-  "alternate_names": ["MJ Balakan", "M. J. Balakan", "Mohammad Javadi", "M. Javadi", "Mohammad Javadi (MJ) Balakan"],
+  "alternate_names": [
+    "MJ Balakan",
+    "M. J. Balakan",
+    "Mohammad Javadi",
+    "M. Javadi",
+    "Mohammad Javadi (MJ) Balakan"
+  ],
   "job_title": "Research Scientist",
   "email": "mjbalakan@gmail.com",
   "meta_description": "Mohammad Javadi (MJ) Balakan is an experimental physicist who builds superconducting quantum devices. Research on topological superconductivity in Fe(Te,Se), 2D materials and silicon optoelectronics.",
-  "knows_about": ["Topological superconductivity", "Quantum computing", "Quantum transport", "Superconducting quantum devices", "Nanofabrication", "2D materials", "Graphene", "Semiconductor devices", "Cryogenic measurements"],
-  "lead": "I build and measure superconducting quantum devices. My research looks for <strong>topological superconductivity</strong>, a route to fault-tolerant qubits, in nanoscale rings of the iron-based superconductor Fe(Te,Se).",
-  "now": "Research Scientist at a stealth-mode startup in the Bay Area. Previously Research Scientist and Postdoctoral Fellow at SUNY Albany's College of Nanotechnology, Science, and Engineering, and Postdoctoral Associate at the University of Tehran.",
-  "research_intro": "For more than a decade I have taken devices from idea to measurement: design, cleanroom fabrication, and low-noise electrical characterization from room temperature down to a few kelvin.",
-  "stats": {"papers": 22, "citations": 436, "h_index": 13, "as_of": "October 2026"},
-  "highlights": [
-    {"label": "Editors' Suggestion", "big": "Physical Review B Letter", "sub": "Intrinsic magnetization of the superconducting condensate in Fe(Te,Se), 2026"},
-    {"label": "Invited talk", "big": "Gordon Research Conference", "sub": "Correlated Electron Systems, Mount Holyoke College, 2026"},
-    {"label": "Invited talk", "big": "Laboratory for Physical Sciences", "sub": "Topological superconductivity in Fe(Te,Se), College Park, MD, 2025"},
-    {"label": "Award", "big": "Outstanding PhD Thesis in Physics", "sub": "Nationwide award, Physical Society of Iran, 2019"}
+  "knows_about": [
+    "Topological superconductivity",
+    "Quantum computing",
+    "Quantum transport",
+    "Superconducting quantum devices",
+    "Nanofabrication",
+    "2D materials",
+    "Graphene",
+    "Semiconductor devices",
+    "Cryogenic measurements"
   ],
-  "themes": [
+  "lead": "I build and measure superconducting quantum devices. My research looks for <strong>topological superconductivity</strong>, a route to fault-tolerant qubits, in nanoscale rings of the iron-based superconductor Fe(Te,Se).",
+  "now": "Research Scientist at a stealth-mode startup in San Jose, California. Previously at SUNY Albany (CNSE) and the University of Tehran.",
+  "stats": {
+    "papers": 22,
+    "citations": 436,
+    "h_index": 13,
+    "as_of": "October 2026"
+  },
+  "career": [
     {
-      "id": "topological-superconductivity",
-      "span": "2022 – present · SUNY Albany",
-      "title": "Topological superconductivity for quantum computing",
-      "text": "Topological superconductors can host Majorana modes, the building block of qubits that resist errors by design. I fabricate hBN-encapsulated Fe(Te,Se) rings a few hundred nanometres across and measure them at cryogenic temperatures with low-noise electronics. These devices show half-quantum flux oscillations, coherent edge transport, and a built-in magnetization of the superconducting condensate.",
-      "figures": [
-        {"src": "fig-ring-device-sem.jpg", "alt": "False-color electron micrograph of a multi-ring Fe(Te,Se) device with a 400 nm scale bar", "dark": true},
-        {"src": "fig-hiw-panel.jpg", "alt": "Magnetoresistance map at 8 K versus winding number and DC current"}
-      ],
-      "caption": "Ring device (400 nm scale) · magnetoresistance map at 8 K",
-      "papers": ["intrinsic-magnetization-fete-se", "half-integer-winding-order-parameter", "aharonov-bohm-spin-polarized-edge-transport", "half-quantum-vorticity-iron-based-superconductor"]
+      "when": "Now",
+      "title": "Research Scientist",
+      "detail": "Stealth-mode startup, Bay Area"
     },
     {
-      "id": "2d-materials",
-      "span": "2016 – 2021 · University of Tehran",
-      "title": "2D materials for CMOS-compatible devices",
-      "text": "Combining atom-thin materials with silicon could give chips new functions at lower energy. I measured how charge crosses the graphene–silicon interface, calculated the efficiency limit of graphene solar cells, and grew borophene, a 2D metal for ultrathin interconnects, by chemical vapor deposition for the first time.",
-      "figures": [
-        {"src": "fig-graphene-silicon.jpg", "alt": "Band diagram of the graphene–silicon junction and schematic of the measurement geometry"}
-      ],
-      "caption": "Graphene–silicon junction: band diagram and in-plane / out-of-plane transport",
-      "papers": ["cvd-borophene-diborane", "graphene-silicon-schottky-kinetics", "graphene-semiconductor-solar-cell-efficiency-limit", "sequentially-assembled-graphene-on-silicon", "tio2-mos2-rgo-infrared-position-sensitive-detectors"]
+      "when": "2025",
+      "title": "Research Scientist",
+      "detail": "CNSE, SUNY Albany · group of Prof. Ji Ung Lee"
     },
     {
-      "id": "hybrid-optoelectronics",
-      "span": "2018 – 2020 · University of Tehran",
-      "title": "Hybrid organic–silicon optoelectronics",
-      "text": "Coating silicon with a conductive polymer gives light sensors that are made at low temperature and can run without external power. I worked out how charge moves through these junctions, then built large-area position-sensitive detectors and self-powered photodiodes with a photovoltage responsivity of 10⁶ V/W.",
-      "figures": [
-        {"src": "fig-pedot-psd.jpg", "alt": "Schematic of a PEDOT:PSS on silicon position-sensitive detector with transmittance data and an electron micrograph"}
-      ],
-      "caption": "PEDOT:PSS / n-Si position-sensitive detector (APL Editor's Pick)",
-      "papers": ["pedot-pss-silicon-position-sensitive-detectors", "pedot-pss-silicon-charge-transport-mechanism", "pedot-pss-silicon-photodiode-responsivity"]
+      "when": "2022–24",
+      "title": "Postdoctoral Fellow",
+      "detail": "CNSE, SUNY Albany · topological superconductors for fault-tolerant quantum computation"
     },
     {
-      "id": "solar-and-modeling",
-      "span": "2015 – 2018 · University of Tehran",
-      "title": "Solar cells, nanostructures and transport modeling",
-      "text": "My early work paired nanostructured solar cells and detectors with computer models of how electrons diffuse through disordered materials. Micro-patterning porous TiO₂ guided electrons toward the electrode and made their diffusion length about three times longer.",
-      "figures": [
-        {"src": "fig-tio2-microstructure.jpg", "alt": "Electron micrographs of micro-patterned porous TiO₂ in top and cross-section views"}
-      ],
-      "caption": "Micro-patterned porous TiO₂ photoanode",
-      "papers": ["quasi-2d-porous-tio2-electron-transport", "monte-carlo-random-walk-confined-porous-tio2", "kinetic-monte-carlo-multiple-trapping", "ultra-low-intensity-uv-detection-tio2", "zno-nanowires-bulk-to-surface-conductivity"]
+      "when": "2019–21",
+      "title": "Postdoctoral Associate",
+      "detail": "Department of Physics, University of Tehran · CMOS-compatible devices from 2D materials"
+    },
+    {
+      "when": "2019",
+      "title": "PhD, Solid-State Physics",
+      "detail": "University of Tehran"
+    },
+    {
+      "when": "2014",
+      "title": "MSc, Nanoscience and Nanotechnology",
+      "detail": "University of Tehran"
+    },
+    {
+      "when": "2012",
+      "title": "BSc, Physics",
+      "detail": "Urmia University"
     }
   ],
-  "news": [
-    {"when": "2026", "title": "Paper accepted in Physical Review B as a Letter", "detail": "Intrinsic magnetization of the superconducting condensate in Fe(Te,Se), selected as an Editors' Suggestion. <a href=\"papers/intrinsic-magnetization-fete-se.html\">Summary</a>"},
-    {"when": "2026", "title": "Invited talk, Gordon Research Conference", "detail": "Correlated Electron Systems, Mount Holyoke College, MA"},
-    {"when": "2026", "title": "Talk, APS Global Physics Summit", "detail": "Topological superconductivity in Fe(Te,Se) mesoscopic devices"},
-    {"when": "2025", "title": "Preprint on arXiv", "detail": "Aharonov–Bohm interference from coherent spin-polarized edge transport in Fe(Te,Se) rings. <a href=\"papers/aharonov-bohm-spin-polarized-edge-transport.html\">Summary</a>"},
-    {"when": "2025", "title": "Invited talk, Laboratory for Physical Sciences", "detail": "Topological superconductivity in Fe(Te,Se), College Park, MD"}
-  ],
-  "career": [
-    {"when": "Now", "title": "Research Scientist", "detail": "Stealth-mode startup, Bay Area"},
-    {"when": "2025", "title": "Research Scientist", "detail": "CNSE, SUNY Albany · group of Prof. Ji Ung Lee"},
-    {"when": "2022–24", "title": "Postdoctoral Fellow", "detail": "CNSE, SUNY Albany · topological superconductors for fault-tolerant quantum computation"},
-    {"when": "2019–21", "title": "Postdoctoral Associate", "detail": "Department of Physics, University of Tehran · CMOS-compatible devices from 2D materials"},
-    {"when": "2019", "title": "PhD, Solid-State Physics", "detail": "University of Tehran"},
-    {"when": "2014", "title": "MSc, Nanoscience and Nanotechnology", "detail": "University of Tehran"},
-    {"when": "2012", "title": "BSc, Physics", "detail": "Urmia University"}
-  ],
   "skills": [
-    {"group": "Fabrication", "items": ["Cleanroom nanofabrication", "Electron-beam lithography", "Focused ion beam", "Reactive ion etching", "hBN encapsulation", "PVD and e-beam evaporation", "CVD and PECVD"]},
-    {"group": "Measurement", "items": ["Cryogenic quantum transport", "Lock-in and low-noise measurement", "Cryogenic filter design", "Phase-sensitive flux measurement", "SEM", "AFM", "Raman spectroscopy", "Optoelectronic testing"]},
-    {"group": "Computation", "items": ["Python", "Instrument automation", "LabVIEW", "Mathematica", "KLayout mask design", "Monte Carlo and COMSOL modeling"]}
+    {
+      "group": "Fabrication",
+      "items": [
+        "Cleanroom nanofabrication",
+        "Electron-beam lithography",
+        "Focused ion beam",
+        "Reactive ion etching",
+        "hBN encapsulation",
+        "PVD and e-beam evaporation",
+        "CVD and PECVD"
+      ]
+    },
+    {
+      "group": "Measurement",
+      "items": [
+        "Cryogenic quantum transport",
+        "Lock-in and low-noise measurement",
+        "Cryogenic filter design",
+        "Phase-sensitive flux measurement",
+        "SEM",
+        "AFM",
+        "Raman spectroscopy",
+        "Optoelectronic testing"
+      ]
+    },
+    {
+      "group": "Computation",
+      "items": [
+        "Python",
+        "Instrument automation",
+        "LabVIEW",
+        "Mathematica",
+        "KLayout mask design",
+        "Monte Carlo and COMSOL modeling"
+      ]
+    }
   ],
   "awards": [
-    {"when": "2020", "title": "Chamran Postdoctoral Fellowship", "detail": "Iran National Elites Foundation"},
-    {"when": "2019", "title": "Outstanding PhD Thesis in Physics", "detail": "Nationwide award, Physical Society of Iran"},
-    {"when": "2019", "title": "Outstanding PhD Dissertation", "detail": "Physical Sciences, University of Tehran"},
-    {"when": "2016–18", "title": "INEF Graduate Scholarship", "detail": "Iran National Elites Foundation"},
-    {"when": "Review", "title": "Peer reviewer", "detail": "Physical Review Letters, 2D Materials, Applied Physics Letters, Nanotechnology"}
+    {
+      "when": "2020",
+      "title": "Chamran Postdoctoral Fellowship",
+      "detail": "Iran National Elites Foundation"
+    },
+    {
+      "when": "2019",
+      "title": "Outstanding PhD Thesis in Physics",
+      "detail": "Nationwide award, Physical Society of Iran"
+    },
+    {
+      "when": "2019",
+      "title": "Outstanding PhD Dissertation",
+      "detail": "Physical Sciences, University of Tehran"
+    },
+    {
+      "when": "2016–18",
+      "title": "INEF Graduate Scholarship",
+      "detail": "Iran National Elites Foundation"
+    },
+    {
+      "when": "Review",
+      "title": "Peer reviewer",
+      "detail": "Physical Review Letters, 2D Materials, Applied Physics Letters, Nanotechnology"
+    }
   ],
   "profiles": [
-    {"name": "Google Scholar", "handle": "436 citations", "url": "https://scholar.google.com/citations?hl=en&user=ruoOTQoAAAAJ"},
-    {"name": "LinkedIn", "handle": "in/mjbalakan", "url": "https://www.linkedin.com/in/mjbalakan"},
-    {"name": "ORCID", "handle": "0000-0002-2117-6668", "url": "https://orcid.org/0000-0002-2117-6668"}
+    {
+      "name": "Google Scholar",
+      "handle": "436 citations",
+      "url": "https://scholar.google.com/citations?hl=en&user=ruoOTQoAAAAJ"
+    },
+    {
+      "name": "LinkedIn",
+      "handle": "in/mjbalakan",
+      "url": "https://www.linkedin.com/in/mjbalakan"
+    },
+    {
+      "name": "ORCID",
+      "handle": "0000-0002-2117-6668",
+      "url": "https://orcid.org/0000-0002-2117-6668"
+    }
+  ],
+  "spotlight": {
+    "span": "2022 – present",
+    "title": "Topological superconductivity for quantum computing",
+    "text": "Topological superconductors can host Majorana modes, the building block of qubits that resist errors by design. I fabricate hBN-encapsulated rings of the iron-based superconductor Fe(Te,Se), a few hundred nanometres across, and measure them at a few kelvin with low-noise electronics.",
+    "results": [
+      {
+        "k": "Φ₀/2",
+        "t": "Half-quantum flux oscillations, the signature of half-integer phase winding",
+        "slug": "half-integer-winding-order-parameter"
+      },
+      {
+        "k": "h/e",
+        "t": "Coherent electron interference along the edges of a superconducting ring",
+        "slug": "aharonov-bohm-spin-polarized-edge-transport"
+      },
+      {
+        "k": "B<sub>eff</sub>",
+        "t": "A built-in magnetization of the superconducting condensate (PRB Letter, Editors' Suggestion)",
+        "slug": "intrinsic-magnetization-fete-se"
+      }
+    ],
+    "device": {
+      "src": "ring-device-tilted-sem.jpg",
+      "alt": "Tilted electron micrograph of a 3 by 4 array of Fe(Te,Se) rings between metal contacts, 1 µm scale bar",
+      "cap": "Electron micrograph of an Fe(Te,Se) ring array"
+    },
+    "data": {
+      "src": "oscillations-7k.jpg",
+      "alt": "Red and blue map of second-harmonic magnetoresistance oscillations versus magnetic field and DC bias current at 7 K",
+      "cap": "Quantum oscillations at 7 K versus field and bias current"
+    }
+  },
+  "lab": {
+    "src": "lab-measurement-rack.jpg",
+    "alt": "MJ Balakan holding a processed silicon wafer next to a rack of lock-in amplifiers, low-noise preamplifiers and source-measure units",
+    "cap": "With a processed wafer and the low-noise measurement rack: lock-in amplifiers, preamplifiers and source-measure units wired to the cryostat."
+  },
+  "earlier": {
+    "span": "2015 – 2021 · University of Tehran",
+    "title": "Earlier: 2D materials and silicon devices",
+    "text": "Before quantum devices I worked on combining 2D materials and polymers with silicon for sensors, solar cells and future chips, and on modeling how charge moves through disordered materials.",
+    "facts": [
+      {
+        "k": "First",
+        "t": "growth of borophene, a one-atom-thick metal, by chemical vapor deposition",
+        "slug": "cvd-borophene-diborane"
+      },
+      {
+        "k": "10⁶×",
+        "t": "slower charge transfer across graphene–silicon than gold–silicon contacts",
+        "slug": "graphene-silicon-schottky-kinetics"
+      },
+      {
+        "k": "25.5%",
+        "t": "efficiency limit calculated for graphene/silicon solar cells",
+        "slug": "graphene-semiconductor-solar-cell-efficiency-limit"
+      },
+      {
+        "k": ">100 mV/mm",
+        "t": "position sensitivity of polymer–silicon light sensors (APL Editor's Pick)",
+        "slug": "pedot-pss-silicon-position-sensitive-detectors"
+      }
+    ]
+  },
+  "timeline": [
+    {
+      "when": "2026",
+      "tag": "Editors' Suggestion",
+      "title": "Paper accepted in Physical Review B as a Letter",
+      "detail": "Intrinsic magnetization of the superconducting condensate in Fe(Te,Se)",
+      "slug": "intrinsic-magnetization-fete-se"
+    },
+    {
+      "when": "2026",
+      "tag": "Invited talk",
+      "title": "Gordon Research Conference",
+      "detail": "Correlated Electron Systems, Mount Holyoke College, MA"
+    },
+    {
+      "when": "2026",
+      "tag": "Talk",
+      "title": "APS Global Physics Summit",
+      "detail": "Topological superconductivity in Fe(Te,Se) mesoscopic devices"
+    },
+    {
+      "when": "2025",
+      "tag": "Invited talk",
+      "title": "Laboratory for Physical Sciences",
+      "detail": "Topological superconductivity in Fe(Te,Se), College Park, MD"
+    },
+    {
+      "when": "2025",
+      "tag": "Preprints",
+      "title": "Half-quantum vorticity and edge transport in Fe(Te,Se)",
+      "detail": "Two preprints on arXiv",
+      "slug": "aharonov-bohm-spin-polarized-edge-transport"
+    },
+    {
+      "when": "2019",
+      "tag": "Award",
+      "title": "Outstanding PhD Thesis in Physics",
+      "detail": "Nationwide award, Physical Society of Iran"
+    }
   ]
 }

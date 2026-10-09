@@ -166,7 +166,6 @@
     "authors": "M. Javadi, A. Mazaheri, H. Torbatiyan, Y. Abdi",
     "venue": "Physical Review Applied 12, 034002",
     "theme": "hybrid",
-    "featured": true,
     "doi": "10.1103/PhysRevApplied.12.034002",
     "summary": "Temperature- and voltage-dependent measurements show that current in polymer–silicon junctions follows different physics in each bias direction.",
     "findings": [
@@ -199,7 +198,6 @@
     "venue": "Applied Physics Letters 112, 113302",
     "badge": "Editor's Pick",
     "theme": "hybrid",
-    "featured": true,
     "doi": "10.1063/1.5022758",
     "figure": "fig-pedot-psd.jpg",
     "figure_alt": "Schematic of the PEDOT:PSS on n-type silicon detector, optical transmittance of the polymer layers, and electron micrograph of the junction",

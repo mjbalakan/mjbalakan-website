@@ -156,6 +156,40 @@ details.all[open] summary::before{content:"− "}
 footer{border-top:1px solid var(--line);padding-block:28px;color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
+
+/* research spotlight */
+.spot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,64px);align-items:center}
+.spot .txt{display:flex;flex-direction:column;gap:16px;min-width:0}
+.spot h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+.results{list-style:none;margin:8px 0 0;padding:0;display:grid}
+.results a{display:grid;grid-template-columns:5.2rem minmax(0,1fr);gap:16px;align-items:baseline;padding:14px 0;border-top:1px solid var(--line);text-decoration:none}
+.results a:hover .t{color:var(--accent)}
+.results .k,.fact .k{font-family:var(--f-display);font-weight:750;font-stretch:110%;font-size:1.35rem;color:var(--accent);white-space:nowrap}
+.results .t{color:var(--fg)}
+.visual{display:grid;grid-template-columns:1fr;gap:14px;min-width:0}
+.visual figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.visual img{width:100%;aspect-ratio:1.25;object-fit:cover;border-radius:10px;border:1px solid var(--line)}
+.visual figure:first-child img{aspect-ratio:1.6}.visual figure:last-child img{aspect-ratio:2.3}
+.visual figcaption{text-transform:none;letter-spacing:.02em}
+.lab{margin:clamp(40px,6vw,72px) 0 0;display:grid;gap:10px}
+.lab img{width:100%;aspect-ratio:2.2;object-fit:cover;object-position:50% 38%;border-radius:14px;border:1px solid var(--line)}
+.lab figcaption{color:var(--muted);font-size:.9rem;max-width:80ch}
+.earlier{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);margin-top:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line);align-items:start}
+.earlier .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
+.earlier .txt p{color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.fact{background:var(--surface);padding:18px;display:flex;flex-direction:column;gap:6px;text-decoration:none;min-width:0}
+.fact .t{color:var(--muted);font-size:.93rem}
+.fact:hover .t{color:var(--fg)}
+.tag{display:block;font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:2px}
+.tl .what a{text-decoration:none}
+.tl .what a:hover b{color:var(--accent)}
+.honors{margin:0;padding-left:1.1em;display:grid;gap:6px;font-size:.95rem}
+.honors span{color:var(--muted)}
+.hero .stats{margin-top:30px;padding-top:18px;border-top:1px dashed var(--line)}
+@media (max-width:820px){.spot,.earlier{grid-template-columns:1fr}.lab img{aspect-ratio:1.5}}
+@media (max-width:480px){.facts{grid-template-columns:1fr}.visual{grid-template-columns:1fr}.results a{grid-template-columns:4.4rem minmax(0,1fr)}}
+
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -251,7 +285,7 @@ def nav(depth):
     return f"""<nav class="nav" aria-label="Main"><div class="wrap">
 <a class="brand" href="{depth}">MJ <span>Balakan</span></a>
 <ul><li><a href="{h}#research">Research</a></li><li class="hide-s"><a href="{h}#publications">Publications</a></li>
-<li class="hide-s"><a href="{h}#news">News</a></li><li><a href="{depth}files/MJBalakan_CV.pdf">CV</a></li><li><a href="{h}#contact">Contact</a></li></ul>
+<li class="hide-s"><a href="{h}#news">News</a></li><li class="hide-s"><a href="{h}#experience">Experience</a></li><li><a href="{depth}files/MJBalakan_CV.pdf">CV</a></li><li><a href="{h}#contact">Contact</a></li></ul>
 </div></nav>"""
 
 def footer():
@@ -289,81 +323,91 @@ def paper_ref(slug):
 def build_index():
     s = SITE
     by = {p["slug"]: p for p in PAPERS}
-    themes_html = []
-    for t in s["themes"]:
-        figs = "".join(
-            f'<figure class="fig{" dark" if f.get("dark") else ""}"><img src="img/{E(f["src"])}" alt="{E(f["alt"])}" loading="lazy"></figure>'
-            for f in t["figures"])
-        cls = "figs two" if len(t["figures"]) == 2 else "figs"
-        plinks = "".join(f'<li><a href="papers/{sl}.html">{E(by[sl]["title"])}</a> <span>({by[sl]["year"]})</span></li>' for sl in t["papers"])
-        themes_html.append(f"""<article class="theme" id="{t['id']}">
-<div class="txt"><span class="mono">{E(t['span'])}</span><h3 style="font-size:1.45rem">{E(t['title'])}</h3>
-<p>{t['text']}</p><ul>{plinks}</ul></div>
-<div class="{cls}">{figs}<p class="mono cap">{E(t['caption'])}</p></div></article>""")
+    sp, ea, lab = s["spotlight"], s["earlier"], s["lab"]
 
-    featured = [p for p in PAPERS if p.get("featured")]
-    rest = [p for p in PAPERS if not p.get("featured")]
-    hl = "".join(f'<div><span class="mono">{E(h["label"])}</span><span class="big">{E(h["big"])}</span><span class="sub">{E(h["sub"])}</span></div>' for h in s["highlights"])
-    news = "".join(f'<li><span class="when">{E(n["when"])}</span><span class="what"><b>{E(n["title"])}</b><span>{n["detail"]}</span></span></li>' for n in s["news"])
+    results = "".join(
+        f'<li><a href="papers/{r["slug"]}.html"><span class="k">{r["k"]}</span><span class="t">{E(r["t"])}</span></a></li>'
+        for r in sp["results"])
+    facts = "".join(
+        f'<a class="fact" href="papers/{f["slug"]}.html"><span class="k">{E(f["k"])}</span><span class="t">{E(f["t"])}</span></a>'
+        for f in ea["facts"])
+    tl = "".join(
+        f'<li><span class="when">{E(n["when"])}</span><span class="what"><span class="tag">{E(n["tag"])}</span>'
+        + (f'<a href="papers/{n["slug"]}.html"><b>{E(n["title"])}</b></a>' if n.get("slug") else f'<b>{E(n["title"])}</b>')
+        + f'<span>{E(n["detail"])}</span></span></li>' for n in s["timeline"])
     cv = "".join(f'<li><span class="when">{E(n["when"])}</span><span class="what"><b>{E(n["title"])}</b><span>{E(n["detail"])}</span></span></li>' for n in s["career"])
     skills = "".join(f'<div class="skillgroup"><span class="mono">{E(g["group"])}</span><div class="chips">{"".join(f"<span>{E(x)}</span>" for x in g["items"])}</div></div>' for g in s["skills"])
+    awards = "".join(f'<li>{E(a["title"])} <span>· {E(a["detail"])}, {E(a["when"])}</span></li>' for a in s["awards"] if a["when"] != "Review")
+    review = next((a for a in s["awards"] if a["when"] == "Review"), None)
     profiles = "".join(f'<li><a href="{E(p["url"])}" target="_blank" rel="noopener"><span>{E(p["name"])}</span><span>{E(p["handle"])}</span></a></li>' for p in s["profiles"])
-    awards = "".join(f'<li><span class="when">{E(a["when"])}</span><span class="what"><b>{E(a["title"])}</b><span>{E(a["detail"])}</span></span></li>' for a in s["awards"])
+    featured = [p for p in PAPERS if p.get("featured")]
+    rest = [p for p in PAPERS if not p.get("featured")]
+    st = s["stats"]
 
     title = "Mohammad Javadi (MJ) Balakan · Physicist, Quantum Devices"
-    desc = s["meta_description"]
-    page = head(title, desc, "", "./", person_ld()) + nav("./") + f"""
+    page = head(title, s["meta_description"], "", "./", person_ld()) + nav("./") + f"""
 <header class="hero"><canvas id="field" aria-hidden="true"></canvas><div class="wrap">
 <div>
 <span class="mono">Experimental physicist · <b>Quantum devices</b></span>
 <h1>Mohammad Javadi Balakan<span class="alt">MJ Balakan</span></h1>
 <p class="lead">{s['lead']}</p>
-<p class="now">{s['now']}</p>
+<p class="now">{E(s['now'])}</p>
 <div class="cta">
 <a class="btn primary" href="files/MJBalakan_CV.pdf">Download CV</a>
 <a class="btn" href="{E(s['profiles'][0]['url'])}" target="_blank" rel="noopener">Google Scholar</a>
 <a class="btn" href="{E(s['profiles'][1]['url'])}" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#contact">Email</a>
 </div>
-<div class="readout mono"><span>Φ = (n/2)·Φ₀</span><span>Φ₀ = h/2e ≈ 2.07 × 10⁻¹⁵ Wb</span><span>Fe(Te,Se) · T<sub>c</sub> ≈ 13 K</span></div>
+<div class="stats">
+<div><strong>{st['papers']}</strong><span class="mono">papers & preprints</span></div>
+<div><strong>{st['citations']}</strong><span class="mono">citations</span></div>
+<div><strong>{st['h_index']}</strong><span class="mono">h-index</span></div>
 </div>
-<figure class="portrait" style="margin:0"><img src="img/mj-balakan.jpg" alt="Portrait of Mohammad Javadi Balakan" width="800" height="800"><figcaption class="mono">San Jose, California</figcaption></figure>
+</div>
+<figure class="portrait" style="margin:0"><img src="img/mj-balakan.jpg" alt="Portrait of Mohammad Javadi Balakan" width="800" height="800"></figure>
 </div></header>
 
 <main>
-<section id="highlights"><div class="wrap">
-<div class="sec-head"><span class="mono">Highlights</span><h2>Selected recognition</h2></div>
-<div class="hl">{hl}</div>
-<div class="stats">
-<div><strong>{s['stats']['papers']}</strong><span class="mono">papers & preprints</span></div>
-<div><strong>{s['stats']['citations']}</strong><span class="mono">citations</span></div>
-<div><strong>{s['stats']['h_index']}</strong><span class="mono">h-index</span></div>
-<a href="{E(s['profiles'][0]['url'])}" target="_blank" rel="noopener">Google Scholar, {E(s['stats']['as_of'])}</a>
-</div></div></section>
-
 <section id="research"><div class="wrap">
-<div class="sec-head"><span class="mono">Research</span><h2>From 2D-material devices to topological superconductors</h2>
-<p>{s['research_intro']}</p></div>
-{''.join(themes_html)}
+<div class="spot">
+<div class="txt">
+<span class="mono">Research · {E(sp['span'])}</span>
+<h2>{E(sp['title'])}</h2>
+<p>{E(sp['text'])}</p>
+<ul class="results">{results}</ul>
+</div>
+<div class="visual">
+<figure><img src="img/{E(sp['device']['src'])}" alt="{E(sp['device']['alt'])}" width="471" height="358"><figcaption class="mono">{E(sp['device']['cap'])}</figcaption></figure>
+<figure><img src="img/{E(sp['data']['src'])}" alt="{E(sp['data']['alt'])}" width="722" height="578" loading="lazy"><figcaption class="mono">{E(sp['data']['cap'])}</figcaption></figure>
+</div>
+</div>
+<figure class="lab"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112" loading="lazy"><figcaption>{E(lab['cap'])}</figcaption></figure>
+<div class="earlier">
+<div class="txt"><span class="mono">{E(ea['span'])}</span><h3>{E(ea['title'])}</h3><p>{E(ea['text'])}</p></div>
+<div class="facts">{facts}</div>
+</div>
+</div></section>
+
+<section id="news"><div class="wrap">
+<div class="sec-head"><span class="mono">Recognition & news</span><h2>Recent</h2></div>
+<ul class="tl">{tl}</ul>
 </div></section>
 
 <section id="publications"><div class="wrap">
 <div class="sec-head"><span class="mono">Publications</span><h2>Selected papers</h2>
-<p>Each title opens a one-page summary with the key result and links to the paper.</p></div>
+<p>Each title opens a one-page summary with the key result, figure and links.</p></div>
 <ul class="pubs">{''.join(pub_item(p) for p in featured)}</ul>
 <details class="all"><summary>All {len(PAPERS)} papers and preprints</summary>
 <ul class="pubs">{''.join(pub_item(p) for p in rest)}</ul></details>
 </div></section>
 
-<section id="news"><div class="wrap two-col">
-<div><div class="sec-head"><span class="mono">News</span><h2>Recent</h2></div><ul class="tl">{news}</ul></div>
-<div><div class="sec-head"><span class="mono">Career</span><h2>Experience & education</h2></div><ul class="tl">{cv}</ul>
+<section id="experience"><div class="wrap two-col">
+<div><div class="sec-head"><span class="mono">Experience</span><h2>Career & education</h2></div><ul class="tl">{cv}</ul>
 <p style="margin-top:18px"><a href="files/MJBalakan_CV.pdf">Full CV (PDF)</a></p></div>
-</div></section>
-
-<section id="skills"><div class="wrap two-col">
-<div><div class="sec-head"><span class="mono">Toolkit</span><h2>What I work with</h2></div>{skills}</div>
-<div><div class="sec-head"><span class="mono">Awards</span><h2>Honors</h2></div><ul class="tl">{awards}</ul></div>
+<div><div class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills</h2></div>{skills}
+<div class="skillgroup"><span class="mono">Honors</span><ul class="honors">{awards}</ul></div>
+{f'<p class="mono" style="text-transform:none;letter-spacing:0">Reviewer for {E(review["detail"])}</p>' if review else ''}
+</div>
 </div></section>
 
 <section id="contact"><div class="wrap contact">
@@ -378,6 +422,7 @@ def build_index():
 <script>{FIELD_JS}{COPY_JS}</script>
 </body></html>"""
     return page
+
 
 def citation(p):
     v = p["venue"]
