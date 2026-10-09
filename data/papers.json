@@ -28,6 +28,7 @@
     "venue": "Submitted",
     "theme": "tsc",
     "featured": true,
+    "arxiv": "2505.01522",
     "figure": "fig-half-integer-winding.jpg",
     "figure_alt": "Normalized magnetoresistance maps versus winding number and DC current, showing oscillations at half the superconducting flux quantum",
     "figure_credit": "Fig. 4 of the manuscript",
@@ -65,8 +66,13 @@
     "venue": "arXiv preprint",
     "theme": "tsc",
     "arxiv": "2505.01522",
-    "summary": "Preprint reporting half-quantum vorticity in mesoscopic rings of the iron-based superconductor Fe(Te,Se), measured with phase-sensitive transport.",
-    "findings": []
+    "summary": "Half-quantum vortices carry half the usual superconducting flux quantum and are predicted in superconductors whose Cooper pairs carry spin. Using mesoscopic ring devices of single-crystal Fe(Te,Se), a superconductor with helical Dirac surface states, we report direct transport signatures of half-quantum vorticity.",
+    "findings": [
+      "Half-integer quantum oscillations arising from the splitting of quantized fluxoid states.",
+      "Distinct signatures of trapped half-integer fluxoids.",
+      "Oscillations modulated by a background symmetry set by the relative orientation of the DC bias current and the perpendicular magnetic field, consistent with strong spin–orbit coupling.",
+      "A step toward non-Abelian excitations in quantum materials and scalable topological qubits."
+    ]
   },
   {
     "slug": "cvd-borophene-diborane",
