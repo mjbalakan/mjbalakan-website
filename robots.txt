@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.mjbalakan.com/sitemap.xml
