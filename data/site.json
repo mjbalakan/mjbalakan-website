@@ -152,7 +152,7 @@
   "spotlight": {
     "span": "2022 – present",
     "title": "Topological superconductivity for quantum computing",
-    "text": "Topological superconductors can host Majorana modes, the building block of qubits that resist errors by design. I fabricate hBN-encapsulated rings of the iron-based superconductor Fe(Te,Se), a few hundred nanometres across, and measure them at a few kelvin with low-noise electronics.",
+    "text": "Topological superconductors combine the quantum coherence of a superconductor with the protection of topology, and can host Majorana modes, the building blocks of qubits that resist errors by design. Proving that a material is a topological superconductor is hard, because its exotic states are hidden beneath a superconducting bulk. The iron-based superconductor Fe(Te,Se), which has topological surface states, is one of the most promising candidates. I fabricate hBN-encapsulated Fe(Te,Se) rings a few hundred nanometres across and probe them with low-noise, phase-sensitive measurements at a few kelvin. A ring forces the superconducting wavefunction to wind around a closed loop, so it reveals the condensate's phase, its spin and its edge states directly.",
     "results": [
       {
         "k": "Φ₀/2",
