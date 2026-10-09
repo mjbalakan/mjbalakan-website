@@ -191,6 +191,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 @media (max-width:820px){.spot,.earlier{grid-template-columns:1fr}.lab img{aspect-ratio:1.5}}
 @media (max-width:480px){.facts{grid-template-columns:1fr}.visual{grid-template-columns:1fr}.results a{grid-template-columns:4.4rem minmax(0,1fr)}}
 
+.statline{margin-top:26px;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted);font-size:.86rem;font-variant-numeric:tabular-nums}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -359,11 +360,7 @@ def build_index():
 <a class="btn" href="{E(s['profiles'][1]['url'])}" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#contact">Email</a>
 </div>
-<div class="stats">
-<div><strong>{st['papers']}</strong><span class="mono">papers & preprints</span></div>
-<div><strong>{st['citations']}</strong><span class="mono">citations</span></div>
-<div><strong>{st['h_index']}</strong><span class="mono">h-index</span></div>
-</div>
+<p class="statline">{st['papers']} papers & preprints · {st['citations']} citations · h-index {st['h_index']}</p>
 </div>
 <figure class="portrait" style="margin:0"><img src="img/mj-balakan.jpg" alt="Portrait of Mohammad Javadi Balakan" width="800" height="800"></figure>
 </div></header>
