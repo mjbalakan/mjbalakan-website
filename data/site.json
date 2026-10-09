@@ -22,8 +22,8 @@
     "Semiconductor devices",
     "Cryogenic measurements"
   ],
-  "lead": "I build superconducting quantum devices to find <strong>topological states</strong> for fault-tolerant qubits.",
-  "now": "Research Scientist at a stealth-mode startup, San Jose, CA. Previously SUNY Albany (CNSE) and University of Tehran.",
+  "lead": "I build and measure superconducting quantum devices. My research looks for <strong>topological superconductivity</strong>, a route to fault-tolerant qubits, in nanoscale rings of the iron-based superconductor Fe(Te,Se).",
+  "now": "Research Scientist at a stealth-mode startup in San Jose, California. Previously at SUNY Albany (CNSE) and the University of Tehran.",
   "stats": {
     "papers": 22,
     "citations": 436,
@@ -34,50 +34,96 @@
     {
       "when": "Now",
       "title": "Research Scientist",
-      "detail": "Stealth-mode startup, San Jose, CA"
+      "detail": "Stealth-mode startup, Bay Area"
     },
     {
-      "when": "2022–25",
-      "title": "Postdoctoral Fellow → Research Scientist",
-      "detail": "CNSE, SUNY Albany · Prof. Ji Ung Lee"
+      "when": "2025",
+      "title": "Research Scientist",
+      "detail": "CNSE, SUNY Albany · group of Prof. Ji Ung Lee"
+    },
+    {
+      "when": "2022–24",
+      "title": "Postdoctoral Fellow",
+      "detail": "CNSE, SUNY Albany · topological superconductors for fault-tolerant quantum computation"
     },
     {
       "when": "2019–21",
       "title": "Postdoctoral Associate",
-      "detail": "Physics, University of Tehran"
+      "detail": "Department of Physics, University of Tehran · CMOS-compatible devices from 2D materials"
     },
     {
       "when": "2019",
       "title": "PhD, Solid-State Physics",
       "detail": "University of Tehran"
+    },
+    {
+      "when": "2014",
+      "title": "MSc, Nanoscience and Nanotechnology",
+      "detail": "University of Tehran"
+    },
+    {
+      "when": "2012",
+      "title": "BSc, Physics",
+      "detail": "Urmia University"
     }
   ],
   "skills": [
     {
-      "group": "Fabrication · measurement · code",
+      "group": "Fabrication",
       "items": [
-        "Nanofabrication",
+        "Cleanroom nanofabrication",
         "Electron-beam lithography",
         "Focused ion beam",
+        "Reactive ion etching",
         "hBN encapsulation",
-        "Thin-film deposition",
+        "PVD and e-beam evaporation",
+        "CVD and PECVD"
+      ]
+    },
+    {
+      "group": "Measurement",
+      "items": [
         "Cryogenic quantum transport",
-        "Low-noise lock-in measurement",
-        "SEM / AFM / Raman",
-        "Python & instrument automation",
-        "KLayout mask design"
+        "Lock-in and low-noise measurement",
+        "Cryogenic filter design",
+        "Phase-sensitive flux measurement",
+        "SEM",
+        "AFM",
+        "Raman spectroscopy",
+        "Optoelectronic testing"
+      ]
+    },
+    {
+      "group": "Computation",
+      "items": [
+        "Python",
+        "Instrument automation",
+        "LabVIEW",
+        "Mathematica",
+        "KLayout mask design",
+        "Monte Carlo and COMSOL modeling"
       ]
     }
   ],
   "awards": [
     {
-      "when": "2019",
-      "title": "Outstanding PhD Thesis in Physics",
-      "detail": "Physical Society of Iran"
-    },
-    {
       "when": "2020",
       "title": "Chamran Postdoctoral Fellowship",
+      "detail": "Iran National Elites Foundation"
+    },
+    {
+      "when": "2019",
+      "title": "Outstanding PhD Thesis in Physics",
+      "detail": "Nationwide award, Physical Society of Iran"
+    },
+    {
+      "when": "2019",
+      "title": "Outstanding PhD Dissertation",
+      "detail": "Physical Sciences, University of Tehran"
+    },
+    {
+      "when": "2016–18",
+      "title": "INEF Graduate Scholarship",
       "detail": "Iran National Elites Foundation"
     },
     {
@@ -106,6 +152,7 @@
   "spotlight": {
     "span": "2022 – present",
     "title": "Topological superconductivity for quantum computing",
+    "text": "Topological superconductors can host Majorana modes, the building block of qubits that resist errors by design. I fabricate hBN-encapsulated rings of the iron-based superconductor Fe(Te,Se), a few hundred nanometres across, and measure them at a few kelvin with low-noise electronics.",
     "results": [
       {
         "k": "Φ₀/2",
@@ -126,7 +173,12 @@
     "device": {
       "src": "ring-device-tilted-sem.jpg",
       "alt": "Tilted electron micrograph of a 3 by 4 array of Fe(Te,Se) rings between metal contacts, 1 µm scale bar",
-      "cap": "Fe(Te,Se) ring array, electron micrograph"
+      "cap": "Electron micrograph of an Fe(Te,Se) ring array"
+    },
+    "data": {
+      "src": "oscillations-7k.jpg",
+      "alt": "Red and blue map of second-harmonic magnetoresistance oscillations versus magnetic field and DC bias current at 7 K",
+      "cap": "Quantum oscillations at 7 K versus field and bias current"
     }
   },
   "lab": {
@@ -137,6 +189,7 @@
   "earlier": {
     "span": "2015 – 2021 · University of Tehran",
     "title": "Earlier: 2D materials and silicon devices",
+    "text": "Before quantum devices I worked on combining 2D materials and polymers with silicon for sensors, solar cells and future chips, and on modeling how charge moves through disordered materials.",
     "facts": [
       {
         "k": "First",
@@ -164,23 +217,40 @@
     {
       "when": "2026",
       "tag": "Editors' Suggestion",
-      "title": "Physical Review B Letter on the intrinsic magnetization of Fe(Te,Se)",
+      "title": "Paper accepted in Physical Review B as a Letter",
+      "detail": "Intrinsic magnetization of the superconducting condensate in Fe(Te,Se)",
       "slug": "intrinsic-magnetization-fete-se"
     },
     {
       "when": "2026",
       "tag": "Invited talk",
-      "title": "Gordon Research Conference, Correlated Electron Systems"
+      "title": "Gordon Research Conference",
+      "detail": "Correlated Electron Systems, Mount Holyoke College, MA"
     },
     {
       "when": "2026",
       "tag": "Talk",
-      "title": "APS Global Physics Summit"
+      "title": "APS Global Physics Summit",
+      "detail": "Topological superconductivity in Fe(Te,Se) mesoscopic devices"
     },
     {
       "when": "2025",
       "tag": "Invited talk",
-      "title": "Laboratory for Physical Sciences, College Park, MD"
+      "title": "Laboratory for Physical Sciences",
+      "detail": "Topological superconductivity in Fe(Te,Se), College Park, MD"
+    },
+    {
+      "when": "2025",
+      "tag": "Preprints",
+      "title": "Half-quantum vorticity and edge transport in Fe(Te,Se)",
+      "detail": "Two preprints on arXiv",
+      "slug": "aharonov-bohm-spin-polarized-edge-transport"
+    },
+    {
+      "when": "2019",
+      "tag": "Award",
+      "title": "Outstanding PhD Thesis in Physics",
+      "detail": "Nationwide award, Physical Society of Iran"
     }
   ]
 }

@@ -26,14 +26,14 @@ CSS = r"""
   --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
   --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
-  --field-opacity:.26; color-scheme:dark;
+  --field-opacity:.42; color-scheme:dark;
 }
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
   --bg:#f5f6fa; --surface:#ffffff; --raise:#eef0f6; --line:#d8dce8;
-  --fg:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.16; color-scheme:light}}
+  --fg:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.2; color-scheme:light}}
 :root[data-theme="light"]{
   --bg:#f5f6fa; --surface:#ffffff; --raise:#eef0f6; --line:#d8dce8;
-  --fg:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.16; color-scheme:light}
+  --fg:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.2; color-scheme:light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -158,7 +158,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 
 /* research spotlight */
-.spot{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:center}
+.spot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,64px);align-items:center}
 .spot .txt{display:flex;flex-direction:column;gap:16px;min-width:0}
 .spot h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
 .results{list-style:none;margin:8px 0 0;padding:0;display:grid}
@@ -191,18 +191,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 @media (max-width:820px){.spot,.earlier{grid-template-columns:1fr}.lab img{aspect-ratio:1.5}}
 @media (max-width:480px){.facts{grid-template-columns:1fr}.visual{grid-template-columns:1fr}.results a{grid-template-columns:4.4rem minmax(0,1fr)}}
 
-
-.hero .field{position:absolute;inset:-40px;background:url(img/oscillations-7k.jpg) center/cover;opacity:var(--field-opacity);filter:saturate(.9);
-  -webkit-mask-image:linear-gradient(100deg,transparent 22%,#000 78%);mask-image:linear-gradient(100deg,transparent 22%,#000 78%);animation:drift 40s ease-in-out infinite alternate;pointer-events:none}
-@keyframes drift{from{transform:translate3d(-20px,0,0) scale(1.04)}to{transform:translate3d(20px,-10px,0) scale(1.08)}}
-@media (prefers-reduced-motion:reduce){.hero .field{animation:none}}
-@media (max-width:820px){.hero .field{-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 65%);mask-image:linear-gradient(180deg,#000 0%,transparent 65%)}}
-.pub .ve{font-style:normal;color:var(--muted)}
-.spot .visual img{aspect-ratio:1.32}
-
-.tl li.one{grid-template-columns:4.2rem minmax(0,1fr) auto;align-items:baseline}
-.tl li.one .tag{margin:0;text-align:right}
-@media (max-width:560px){.tl li.one{grid-template-columns:3.4rem minmax(0,1fr)}.tl li.one .tag{grid-column:2;text-align:left;order:-1}}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -267,7 +255,7 @@ def links_of(p, depth="./"):
     if p.get("arxiv"): out.append(f'<a href="https://arxiv.org/abs/{E(p["arxiv"])}" target="_blank" rel="noopener">arXiv:{E(p["arxiv"])}</a>')
     return out
 
-def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/share-card.jpg"):
+def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/mj-balakan.jpg"):
     url = BASE + "/" + path
     return f"""<!doctype html>
 <html lang="en">
@@ -283,7 +271,7 @@ def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/shar
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{E(url)}">
 <meta property="og:image" content="{E(BASE + '/' + og_image)}">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0a0e1a">
 <link rel="icon" href="{depth}img/favicon.svg" type="image/svg+xml">
 {FONTS}
@@ -321,14 +309,14 @@ def person_ld():
         "sameAs": [p["url"] for p in SITE["profiles"]],
     }
 
-def pub_item(p, depth="./", compact=False):
+def pub_item(p, depth="./"):
     badge = f'<span class="badge">{E(p["badge"])}</span>' if p.get("badge") else ""
     ls = [f'<a href="{depth}papers/{p["slug"]}.html">Summary</a>'] + links_of(p)
     return f"""<li class="pub"><div class="yr">{p['year']}</div><div>
 <h3><a href="{depth}papers/{p['slug']}.html">{E(p['title'])}</a></h3>
-{'' if compact else f'<div class="au">{bold_me(p["authors"])}</div>'}
+<div class="au">{bold_me(p['authors'])}</div>
 <div class="ve">{E(p['venue'])}{badge}</div>
-{'' if compact else f'<div class="links">{" · ".join(ls)}</div>'}</div></li>"""
+<div class="links">{' · '.join(ls)}</div></div></li>"""
 
 def paper_ref(slug):
     return next(p for p in PAPERS if p["slug"] == slug)
@@ -345,9 +333,9 @@ def build_index():
         f'<a class="fact" href="papers/{f["slug"]}.html"><span class="k">{E(f["k"])}</span><span class="t">{E(f["t"])}</span></a>'
         for f in ea["facts"])
     tl = "".join(
-        f'<li class="one"><span class="when">{E(n["when"])}</span><span class="what">'
+        f'<li><span class="when">{E(n["when"])}</span><span class="what"><span class="tag">{E(n["tag"])}</span>'
         + (f'<a href="papers/{n["slug"]}.html"><b>{E(n["title"])}</b></a>' if n.get("slug") else f'<b>{E(n["title"])}</b>')
-        + f'</span><span class="tag">{E(n["tag"])}</span></li>' for n in s["timeline"])
+        + f'<span>{E(n["detail"])}</span></span></li>' for n in s["timeline"])
     cv = "".join(f'<li><span class="when">{E(n["when"])}</span><span class="what"><b>{E(n["title"])}</b><span>{E(n["detail"])}</span></span></li>' for n in s["career"])
     skills = "".join(f'<div class="skillgroup"><span class="mono">{E(g["group"])}</span><div class="chips">{"".join(f"<span>{E(x)}</span>" for x in g["items"])}</div></div>' for g in s["skills"])
     awards = "".join(f'<li>{E(a["title"])} <span>· {E(a["detail"])}, {E(a["when"])}</span></li>' for a in s["awards"] if a["when"] != "Review")
@@ -359,7 +347,7 @@ def build_index():
 
     title = "Mohammad Javadi (MJ) Balakan · Physicist, Quantum Devices"
     page = head(title, s["meta_description"], "", "./", person_ld()) + nav("./") + f"""
-<header class="hero"><div class="field" aria-hidden="true"></div><div class="wrap">
+<header class="hero"><canvas id="field" aria-hidden="true"></canvas><div class="wrap">
 <div>
 <span class="mono">Experimental physicist · <b>Quantum devices</b></span>
 <h1>Mohammad Javadi Balakan<span class="alt">MJ Balakan</span></h1>
@@ -386,15 +374,17 @@ def build_index():
 <div class="txt">
 <span class="mono">Research · {E(sp['span'])}</span>
 <h2>{E(sp['title'])}</h2>
+<p>{E(sp['text'])}</p>
 <ul class="results">{results}</ul>
 </div>
 <div class="visual">
 <figure><img src="img/{E(sp['device']['src'])}" alt="{E(sp['device']['alt'])}" width="471" height="358"><figcaption class="mono">{E(sp['device']['cap'])}</figcaption></figure>
+<figure><img src="img/{E(sp['data']['src'])}" alt="{E(sp['data']['alt'])}" width="722" height="578" loading="lazy"><figcaption class="mono">{E(sp['data']['cap'])}</figcaption></figure>
 </div>
 </div>
 <figure class="lab"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112" loading="lazy"><figcaption>{E(lab['cap'])}</figcaption></figure>
 <div class="earlier">
-<div class="txt"><span class="mono">{E(ea['span'])}</span><h3>{E(ea['title'])}</h3></div>
+<div class="txt"><span class="mono">{E(ea['span'])}</span><h3>{E(ea['title'])}</h3><p>{E(ea['text'])}</p></div>
 <div class="facts">{facts}</div>
 </div>
 </div></section>
@@ -406,10 +396,10 @@ def build_index():
 
 <section id="publications"><div class="wrap">
 <div class="sec-head"><span class="mono">Publications</span><h2>Selected papers</h2>
-</div>
-<ul class="pubs">{''.join(pub_item(p, compact=True) for p in featured)}</ul>
+<p>Each title opens a one-page summary with the key result, figure and links.</p></div>
+<ul class="pubs">{''.join(pub_item(p) for p in featured)}</ul>
 <details class="all"><summary>All {len(PAPERS)} papers and preprints</summary>
-<ul class="pubs">{''.join(pub_item(p, compact=True) for p in rest)}</ul></details>
+<ul class="pubs">{''.join(pub_item(p) for p in rest)}</ul></details>
 </div></section>
 
 <section id="experience"><div class="wrap two-col">
@@ -430,7 +420,7 @@ def build_index():
 </div></section>
 </main>
 {footer()}
-<script>{COPY_JS}</script>
+<script>{FIELD_JS}{COPY_JS}</script>
 </body></html>"""
     return page
 
@@ -461,7 +451,7 @@ def build_paper(p):
     same = [q for q in PAPERS if q["theme"] == p["theme"] and q["slug"] != p["slug"]][:3]
     more = "".join(f'<a href="{q["slug"]}.html">{E(q["title"])}<span>{E(q["venue"])}, {q["year"]}</span></a>' for q in same)
     page = head(title, desc, f"papers/{p['slug']}.html", depth, ld, "article",
-                f"img/{p['figure']}" if p.get("figure") else "img/share-card.jpg") + nav(depth) + f"""
+                f"img/{p['figure']}" if p.get("figure") else "img/mj-balakan.jpg") + nav(depth) + f"""
 <main class="paper"><div class="wrap">
 <div class="crumb mono"><a href="../#publications">← All publications</a></div>
 <span class="mono">{p['year']} · {E(p['venue'])}</span>{badge}
