@@ -372,7 +372,7 @@ def build_index():
 <main>
 <section id="research"><div class="wrap">
 <div class="sec-head" style="max-width:none"><span class="mono">Research · {E(sp['span'])}</span>
-<h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem);max-width:14ch">{E(sp['title'])}</h2></div>
+<h2 style="font-size:clamp(1.8rem,3.6vw,2.6rem)">{E(sp['title']).replace(chr(10),'<br>')}</h2></div>
 <div class="spot">
 <div class="txt">
 <p>{E(sp['text'])}</p>
