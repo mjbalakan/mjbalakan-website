@@ -171,7 +171,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .visual figcaption{text-transform:none;letter-spacing:.02em}
 .lab{margin:clamp(40px,6vw,72px) 0 0;display:grid;gap:10px}
 .lab img{width:100%;aspect-ratio:2.2;object-fit:cover;object-position:50% 38%;border-radius:14px;border:1px solid var(--line)}
-.lab figcaption{color:var(--muted);font-size:.9rem;max-width:80ch}
+.lab figcaption{color:var(--muted);font-size:.84rem}
+@media (min-width:900px){.lab figcaption{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
 .earlier{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,4vw,56px);margin-top:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line);align-items:start}
 .earlier .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
 .earlier .txt p{color:var(--muted)}
