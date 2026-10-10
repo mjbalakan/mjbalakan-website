@@ -233,7 +233,7 @@
       {
         "span": "2014 – 2018",
         "title": "Solar cells and physical modeling",
-        "text": "Our monte Carlo simulations showed that confining a porous oxide network steers electrons toward the collecting electrode. We then built column-structured dye-sensitized solar cells and measured longer electron lifetimes and diffusion lengths. With COMSOL and numerical models, we also explained how plasma-enhanced CVD produces self-organized, single-standing carbon nanotubes.",
+        "text": "Our Monte Carlo simulations showed that confining a porous oxide network steers electrons toward the collecting electrode. We then built column-structured dye-sensitized solar cells and measured longer electron lifetimes and diffusion lengths. With COMSOL and numerical models, we also explained how plasma-enhanced CVD produces self-organized, single-standing carbon nanotubes.",
         "facts": [
           {
             "k": "~3×",
