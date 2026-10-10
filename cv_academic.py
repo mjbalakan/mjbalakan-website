@@ -1,6 +1,6 @@
-"""Academic-layout CV: same data files as cv_build.py, different presentation.
+"""Full CV from the shared data files.
 
-Writes cv-academic.html and files/MJBalakan_CV_academic.pdf.
+Writes cv.html and files/MJBalakan_CV.pdf.
 """
 import json, re, html, datetime
 
@@ -56,6 +56,7 @@ body{margin:0;color:var(--ink);font:10.4pt/1.42 "TeX Gyre Pagella","Palatino Lin
 .sheet{background:#fff;max-width:8.5in;margin:24px auto;padding:0.85in 0.9in;box-shadow:0 2px 14px rgba(0,0,0,.12)}
 .bar{max-width:8.5in;margin:16px auto 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-inline:16px;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
 .bar a{color:#1b2440;text-decoration:none;padding:8px 14px;border:1px solid #c9ccd6;border-radius:8px;background:#fff}
+.seg{display:inline-flex;border:1px solid #1b2440;border-radius:8px;overflow:hidden;background:#fff}.bar .seg a{border:0;border-radius:0;padding:8px 14px}.bar .seg a+a{border-left:1px solid #1b2440}.bar .seg a.on{background:#1b2440;color:#fff}
 .bar a.pdf{background:#1b2440;color:#fff;border-color:#1b2440}
 @media screen and (max-width:700px){.sheet{padding:28px 18px;margin:12px 8px}.row{grid-template-columns:1fr!important;gap:2px!important}.row .d{color:var(--muted)}}
 @media print{html,body{background:#fff}.sheet{box-shadow:none;margin:0;padding:0;max-width:none}.bar{display:none}}
@@ -147,12 +148,13 @@ def build(root, site, papers):
     page = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Academic CV · {E(site['name'])}</title>
-<meta name="robots" content="noindex">
+<title>CV · {E(site['name'])}</title>
+<meta name="description" content="Curriculum vitae of {E(site['name'])}, experimental physicist: appointments, publications, talks and skills.">
+<link rel="canonical" href="{E(site['url'])}/cv.html">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <style>{CSS}</style></head>
 <body>
-<nav class="bar"><a href="./">← {E(site['name'])}</a><a class="pdf" href="files/MJBalakan_CV_academic.pdf">Download PDF</a></nav>
+<nav class="bar"><a href="./">← {E(site['name'])}</a><span class="seg" role="group" aria-label="CV format"><a href="resume.html">2-page resume</a><a href="cv.html" class="on" aria-current="page">Full CV</a></span><a class="pdf" href="files/MJBalakan_CV.pdf">Download PDF</a></nav>
 <main class="sheet">
 <header>
 <h1>{E(site['name'])}</h1>
@@ -172,7 +174,7 @@ def build(root, site, papers):
 <h2>Technical skills</h2><div class="sk">{skills}</div>
 <h2>References</h2><p>{E(ac['references'])}</p>
 </main></body></html>"""
-    (root / "cv-academic.html").write_text(page)
+    (root / "cv.html").write_text(page)
 
 
 def make_pdf(root, site):
@@ -187,8 +189,8 @@ def make_pdf(root, site):
     with sync_playwright() as p:
         b = p.chromium.launch()
         pg = b.new_page()
-        pg.set_content((root / "cv-academic.html").read_text(), wait_until="load")
-        pg.pdf(path=str(root / "files/MJBalakan_CV_academic.pdf"), format="Letter", display_header_footer=True,
+        pg.set_content((root / "cv.html").read_text(), wait_until="load")
+        pg.pdf(path=str(root / "files/MJBalakan_CV.pdf"), format="Letter", display_header_footer=True,
                header_template=header, footer_template=footer,
                margin={"top": "0.85in", "bottom": "0.8in", "left": "0.9in", "right": "0.9in"})
         b.close()

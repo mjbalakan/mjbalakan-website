@@ -26,6 +26,7 @@ body{margin:0;color:var(--ink);font:9.8pt/1.4 "Inter","Helvetica Neue",Arial,san
 .sheet{background:#fff;max-width:8.5in;margin:24px auto;padding:0.6in 0.65in;box-shadow:0 2px 14px rgba(0,0,0,.12)}
 .bar{max-width:8.5in;margin:16px auto 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-inline:16px;font:500 14px/1.4 system-ui,sans-serif}
 .bar a{color:#1b2440;text-decoration:none;padding:8px 14px;border:1px solid #c9ccd6;border-radius:8px;background:#fff}
+.seg{display:inline-flex;border:1px solid #1b2440;border-radius:8px;overflow:hidden;background:#fff}.bar .seg a{border:0;border-radius:0;padding:8px 14px}.bar .seg a+a{border-left:1px solid #1b2440}.bar .seg a.on{background:#1b2440;color:#fff}
 .bar a.pdf{background:#1b2440;color:#fff;border-color:#1b2440}
 @media screen and (max-width:700px){.sheet{padding:24px 16px;margin:12px 8px}.job .top{flex-direction:column}}
 @media print{html,body{background:#fff}.sheet{box-shadow:none;margin:0;padding:0;max-width:none}.bar{display:none}}
@@ -106,7 +107,7 @@ def build(root, site, papers):
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
 <style>{CSS}</style></head>
 <body>
-<nav class="bar"><a href="./">← {E(site['name'])}</a><a class="pdf" href="files/MJBalakan_Resume.pdf">Download PDF</a></nav>
+<nav class="bar"><a href="./">← {E(site['name'])}</a><span class="seg" role="group" aria-label="CV format"><a href="resume.html" class="on" aria-current="page">2-page resume</a><a href="cv.html">Full CV</a></span><a class="pdf" href="files/MJBalakan_Resume.pdf">Download PDF</a></nav>
 <main class="sheet">
 <header><div><h1>{E(site['name'])}</h1><p class="head">{E(r['headline'])}</p></div>
 <div class="contact">{E(cv['academic']['location'])} · {E(cv['academic']['status'])}<br>

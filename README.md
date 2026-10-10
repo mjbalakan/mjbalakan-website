@@ -15,7 +15,7 @@ Name, email and homepage come from `site.json` and appear in both.
 
 ## Updating
 1. Edit the data files (adding a paper = one entry in `papers.json`; it appears on the site, gets its own page, and is listed first in the CV).
-2. Run `python3 build.py`. It writes `index.html`, `papers/*.html`, `cv.html`, `files/MJBalakan_CV.pdf`, `sitemap.xml`, `robots.txt`, `404.html`.
+2. Run `python3 build.py`. It writes `index.html`, `papers/*.html`, `cv.html` + `files/MJBalakan_CV.pdf` (full CV), `resume.html` + `files/MJBalakan_Resume.pdf` (2-page resume), `sitemap.xml`, `robots.txt`, `404.html`.
    The PDF step needs Playwright (`pip install playwright && playwright install chromium`); without it, use `python3 build.py --no-pdf`.
 3. Commit and push. GitHub Pages republishes within a minute or two.
 

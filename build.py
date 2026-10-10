@@ -5,7 +5,7 @@ Edit data/papers.json or data/site.json, then run:  python3 build.py
 Outputs: index.html, papers/<slug>.html, sitemap.xml, robots.txt, 404.html
 """
 import json, html, os, re, sys, datetime, pathlib
-import cv_build, cv_academic, cv_resume
+import cv_academic, cv_resume
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SITE = json.loads((ROOT / "data/site.json").read_text().replace("Fe(Te,Se)", "Fe(Te,\u2060Se)"))
@@ -78,6 +78,7 @@ p{margin:0}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:500;font-size:.95rem}
 .btn:hover{border-color:var(--accent);color:var(--fg)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#120c02}
+.cvseg{display:inline-flex;border-radius:8px;overflow:hidden;background:var(--accent);border:1px solid var(--accent)}.cvseg a{padding:10px 16px;color:#120c02;text-decoration:none;font-weight:600;font-size:.95rem}.cvseg a+a{border-left:1px solid rgba(18,12,2,.35)}.cvseg a:hover{background:#fff3;color:#120c02}
 .btn.primary:hover{filter:brightness(1.08);color:#120c02}
 .portrait{position:relative;justify-self:end;width:min(100%,330px)}
 .portrait img{border-radius:14px;border:1px solid var(--line);aspect-ratio:1;object-fit:cover;width:100%}
@@ -397,7 +398,7 @@ def build_index():
 <p class="lead">{s['lead']}</p>
 <p class="now">{E(s['now'])}</p>
 <div class="cta">
-<a class="btn primary" href="files/MJBalakan_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+<span class="cvseg" role="group" aria-label="Download CV"><a href="files/MJBalakan_Resume.pdf" target="_blank" rel="noopener">2-page resume</a><a href="files/MJBalakan_CV.pdf" target="_blank" rel="noopener">Full CV</a></span>
 <a class="btn" href="{E(s['profiles'][0]['url'])}" target="_blank" rel="noopener">Google Scholar</a>
 <a class="btn" href="{E(s['profiles'][1]['url'])}" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#contact">Email</a>
@@ -520,8 +521,7 @@ def main():
     nf = head("Page not found · MJ Balakan", "Page not found.", "404.html", "/", {"@context": "https://schema.org", "@type": "WebPage"}) + nav("/") + \
         '<main class="paper"><div class="wrap"><h1>Page not found</h1><p style="margin-top:16px"><a href="/">Go to the homepage</a></p></div></main>' + footer() + "</body></html>"
     (out / "404.html").write_text(nf)
-    cv_build.build_cv(ROOT, SITE, PAPERS)
-    pdf = cv_build.make_pdf(ROOT) if "--no-pdf" not in sys.argv else False
+    pdf = "--no-pdf" not in sys.argv
     cv_academic.build(ROOT, SITE, PAPERS)
     if pdf: cv_academic.make_pdf(ROOT, SITE)
     cv_resume.build(ROOT, SITE, PAPERS)
