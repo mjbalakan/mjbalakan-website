@@ -79,7 +79,7 @@
       "year": "2014"
     },
     {
-      "title": "Graduated with distinction, MSc in Physics",
+      "title": "Graduated with distinction, MSc",
       "year": "2014"
     },
     {
@@ -87,7 +87,7 @@
       "year": "2012"
     },
     {
-      "title": "Graduated with distinction, BSc in Physics",
+      "title": "Graduated with distinction, BSc",
       "year": "2012"
     }
   ],
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "lab": "Laboratory for nanotechnology, University of Tehran, Iran (Prof. Abdi’s lab)",
+      "lab": "Laboratory for Nanotechnology, University of Tehran, Iran (Prof. Abdi’s lab)",
       "topic": "CMOS-compatible solid-state devices based on 2D materials",
       "items": [
         "Investigated charge transport across graphene-silicon 2D/3D Schottky junctions.",
@@ -141,7 +141,7 @@
       ]
     },
     {
-      "lab": "Nanoelectronic laboratory, Tarbiat Modares University, Iran (Dr. Sara Darbari’s lab)",
+      "lab": "Nanoelectronics Laboratory, Tarbiat Modares University, Iran (Dr. Sara Darbari’s lab)",
       "items": [
         "Investigated sound-driven CNT-based tribo-electric nanogenerator in sonic array.",
         "Developed a piezo-phototronic device based on graphene/MoS2 heterostructure."
@@ -150,9 +150,9 @@
   ],
   "teaching": "Teaching Assistant, University of Tehran (2012–2018): Quantum Mechanics (undergraduate), Advanced Solid-State Physics &amp; Laboratory (graduate), Advanced Quantum Mechanics (graduate)",
   "mentoring": [
-    "Mentored Ph.D. researcher Daniel Titcomb in experimental studies of topological superconductors (Dr. Lee’s group).",
-    "Mentored graduate researcher AliAkbar Noroozi in graphene-silicon optical detectors; work contributed to a Ph.D. thesis and two publications (Dr. Abdi’s group).",
-    "Mentored graduate student Mahdieh Gholami on CVD growth of two-dimensional MoS<sub>2</sub> for infrared detectors; work contributed to a master’s thesis and a publication (Dr. Abdi’s group)."
+    "Mentored Ph.D. researcher Daniel Titcombe in experimental studies of topological superconductors (Prof. Lee’s group).",
+    "Mentored graduate researcher AliAkbar Noroozi in graphene-silicon optical detectors; work contributed to a Ph.D. thesis and two publications (Prof. Abdi’s group).",
+    "Mentored graduate student Mahdieh Gholami on CVD growth of two-dimensional MoS<sub>2</sub> for infrared detectors; work contributed to a master’s thesis and a publication (Prof. Abdi’s group)."
   ],
   "invited_talks": [
     "<i>“Half-integer winding of order parameter &amp; intrinsic magnetization of superconducting condensate in Fe(Te,Se)”</i>, GRC correlated electron systems, Mount Holyoke College, MA, USA (2026).",
@@ -219,11 +219,17 @@
         "role": "Visiting Researcher",
         "org": "Department of Physics, Sapienza Università di Roma, Italy",
         "note": "Supervisor: Prof. Giorgio Parisi · Statistical properties of harmonic spheres near jamming"
+      },
+      {
+        "when": "2012 – 2019",
+        "role": "Graduate Researcher (MSc and PhD)",
+        "org": "University of Tehran and Tarbiat Modares University, Iran",
+        "note": "Groups of Prof. Yaser Abdi, Prof. Ezatollah Arzi and Dr. Sara Darbari",
+        "research_multi": [
+          2,
+          3
+        ]
       }
-    ],
-    "graduate_research": [
-      2,
-      3
     ],
     "skills": [
       {
@@ -239,6 +245,65 @@
         "text": "Python, Mathematica, LabVIEW, KLayout; instrument automation; Monte Carlo and COMSOL modeling."
       }
     ],
-    "references": "Available upon request."
+    "references": "Available upon request.",
+    "name_note": "Publications before 2022 appear under M. Javadi; since 2022 under M. J. Balakan.",
+    "arxiv_notes": {
+      "half-integer-winding-order-parameter": "extended study of arXiv:2505.01522"
+    }
+  },
+  "resume": {
+    "headline": "Experimental Physicist · Quantum Devices · Nanofabrication",
+    "summary": "Experimental physicist with more than a decade of hands-on work taking quantum and semiconductor devices from design and cleanroom fabrication to low-noise cryogenic measurement. Recent work on topological superconductivity in Fe(Te,Se) nanoscale ring devices for fault-tolerant quantum computing, published in Physical Review B (Editors’ Suggestion). Earlier, CMOS-compatible 2D-material and hybrid organic–silicon optoelectronic devices. Now combining this experience with AI for science and technology.",
+    "experience": [
+      {
+        "when": "2026 – present",
+        "role": "Research Scientist",
+        "org": "Stealth-mode startup, Bay Area, CA",
+        "bullets": []
+      },
+      {
+        "when": "2022 – 2026",
+        "role": "Research Scientist; Postdoctoral Fellow",
+        "org": "CNSE, SUNY Albany · Prof. Ji Ung Lee",
+        "bullets": [
+          "Built an end-to-end fabrication process for hBN-encapsulated, nanoscale superconducting ring devices (EBL, FIB, RIE, thin-film deposition).",
+          "Upgraded a closed-cycle cryostat and designed cryogenic low-pass filters; automated low-noise, phase-sensitive measurements in Python.",
+          "Demonstrated half-integer flux quantization, coherent edge transport and intrinsic magnetization of the condensate in Fe(Te,Se); 4 first-author papers and preprints.",
+          "Collaborated with Brookhaven National Laboratory, Stony Brook University and NY Creates; invited talks at LPS and the Gordon Research Conference."
+        ]
+      },
+      {
+        "when": "2019 – 2021",
+        "role": "Postdoctoral Associate",
+        "org": "Department of Physics, University of Tehran",
+        "bullets": [
+          "First chemical-vapor-deposition growth of borophene, a one-atom-thick metal for 2D interconnects (ACS AMI, 100+ citations).",
+          "Measured carrier transfer across graphene–silicon junctions (10⁶× slower than Au–Si) and derived the 25.5% efficiency limit of graphene/Si solar cells.",
+          "Developed position-sensitive detectors and self-powered photodiodes on PEDOT:PSS/silicon (APL Editor’s Pick; 10⁶ V/W responsivity)."
+        ]
+      },
+      {
+        "when": "2018",
+        "role": "Visiting Researcher",
+        "org": "Sapienza Università di Roma · Prof. Giorgio Parisi (2021 Nobel Laureate in Physics)",
+        "bullets": []
+      },
+      {
+        "when": "2012 – 2019",
+        "role": "Graduate Researcher",
+        "org": "University of Tehran; Tarbiat Modares University",
+        "bullets": [
+          "Nanostructured solar cells and photodetectors; Monte Carlo and COMSOL modeling of charge transport and plasma growth."
+        ]
+      }
+    ],
+    "selected": [
+      "intrinsic-magnetization-fete-se",
+      "half-integer-winding-order-parameter",
+      "aharonov-bohm-spin-polarized-edge-transport",
+      "cvd-borophene-diborane",
+      "graphene-silicon-schottky-kinetics",
+      "pedot-pss-silicon-position-sensitive-detectors"
+    ]
   }
 }

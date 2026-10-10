@@ -17,13 +17,18 @@ def _ref(ref):
     return f"<b>{m.group(1)}</b>{E(m.group(2))}" if m else E(ref)
 
 
+NOTES = {}
+
+
 def _links(p):
     out = []
     if p.get("doi"):
         out.append(f'<a href="https://doi.org/{E(p["doi"])}">doi:{E(p["doi"])}</a>')
-    if p.get("arxiv"):
+    if p["slug"] in NOTES:
+        out.append(f'<span class="xnote">{E(NOTES[p["slug"]])}</span>')
+    elif p.get("arxiv"):
         out.append(f'<a href="https://arxiv.org/abs/{E(p["arxiv"])}">arXiv:{E(p["arxiv"])}</a>')
-    return (" " + " · ".join(out)) if out else ""
+    return out
 
 
 def _pub(n, p):
@@ -38,7 +43,8 @@ def _pub(n, p):
     else:
         status = "submitted" if "submitted" in c.get("tail", "") else "preprint"
         body = f'{_me(c["authors"])}, “{title},” {status} ({p["year"]}).'
-    return f'<li value="{n}"><span>{body}{badge}{_links(p)}</span></li>'
+    tail = [x for x in ([badge.strip()] if badge else []) + _links(p)]
+    return f'<li value="{n}"><span>{body} {" · ".join(tail)}</span></li>'
 
 
 CSS = r"""
@@ -78,12 +84,17 @@ ol.pubs a{font-size:9pt;color:var(--muted)}
 ul.plain{margin:0;padding-left:1.05em}
 ul.plain li{margin:0 0 3px;text-align:justify;break-inside:avoid}
 .sk p{margin:0 0 3px;text-align:justify}
+.row .sub{font-style:italic;color:var(--muted);font-size:9.8pt;margin-top:4px}
+.xnote{font-size:9pt;color:var(--muted)}
+h2,h3{orphans:3}
+ol.pubs,ul.plain{orphans:2;widows:2}
 """
 
 
 def build(root, site, papers):
     cv = json.loads((root / "data/cv.json").read_text())
     ac = cv["academic"]
+    NOTES.clear(); NOTES.update(ac.get("arxiv_notes", {}))
     by = {p["slug"]: p for p in papers}
     order = cv.get("publication_order", [])
     pubs = [p for p in papers if p["slug"] not in order] + [by[s] for s in order if s in by]
@@ -95,11 +106,9 @@ def build(root, site, papers):
     appts = "".join(
         f'<div class="row"><span class="d">{E(a["when"])}</span><div><p class="role">{E(a["role"])}</p>'
         f'<p>{E(a["org"])}</p>' + (f'<p class="note">{E(a["note"])}</p>' if a.get("note") else "")
-        + (bullets(a["research"]) if "research" in a else "") + "</div></div>"
+        + (bullets(a["research"]) if "research" in a else "")
+        + "".join(f'<p class="sub">{research[i]["lab"]}</p>{bullets(i)}' for i in a.get("research_multi", [])) + "</div></div>"
         for a in ac["appointments"])
-    grad = "".join(
-        f'<div class="row"><span class="d"></span><div><p class="note">{research[i]["lab"]}</p>{bullets(i)}</div></div>'
-        for i in ac.get("graduate_research", []))
 
     def year(s):
         m = re.search(r"\((\d{4})\)", s)
@@ -130,7 +139,7 @@ def build(root, site, papers):
     confs = "".join(f"<li>{x}</li>".replace("<u>", "<b>").replace("</u>", "</b>") for x in cv["conferences"])
     service = "".join(f"<li>{x}</li>" for x in cv["service"])
     mentoring = "".join(f"<li>{x}</li>" for x in cv["mentoring"])
-    skills = "".join(f'<p><b>{E(s["label"])}:</b> {E(s["text"])}</p>' for s in ac["skills"])
+    skills = "".join(f'<p><b>{s["label"]}:</b> {s["text"]}</p>' for s in cv["skills"])
     sch = next((p["url"] for p in site["profiles"] if "Scholar" in p["name"]), "")
     orc = next((p for p in site["profiles"] if p["name"] == "ORCID"), None)
     home = site["url"].replace("https://", "")
@@ -147,18 +156,18 @@ def build(root, site, papers):
 <main class="sheet">
 <header>
 <h1>{E(site['name'])}</h1>
-<p class="pos">{E(ac['position'])} · {E(ac['location'])}</p>
-<p class="contact"><a href="mailto:{E(site['email'])}">{E(site['email'])}</a> · <a href="{E(site['url'])}">{E(home)}</a> · <a href="{E(sch)}">Google Scholar</a>{f' · ORCID <a href="{E(orc["url"])}">{E(orc["handle"])}</a>' if orc else ''} · {E(ac['status'])}</p>
+<p class="pos">{E(ac['position'])} · {E(ac['location'])} · {E(ac['status'])}</p>
+<p class="contact"><a href="mailto:{E(site['email'])}">{E(site['email'])}</a> · <a href="{E(site['url'])}">{E(home)}</a> · <a href="{E(sch)}">Google Scholar</a>{f' · ORCID <a href="{E(orc["url"])}">{E(orc["handle"])}</a>' if orc else ''}</p>
 </header>
 
 <h2>Research interests</h2><p class="interests">{E(ac['interests'])}</p>
 <h2>Appointments</h2>{appts}
-<h2>Education</h2>{edu}<h3>Graduate research</h3>{grad}
-<h2>Publications</h2>{metrics}{''.join(blocks)}
+<h2>Education</h2>{edu}
+<h2>Awards, fellowships and funding</h2>{awards}
+<h2 style="break-before:page">Publications</h2>{metrics}<p class="metrics">{E(ac.get('name_note',''))}</p>{''.join(blocks)}
 <h2>Invited talks</h2><ul class="plain">{talks}</ul>
 <h2>Conference presentations</h2><ul class="plain">{confs}</ul>
-<h2>Awards, fellowships and funding</h2>{awards}
-<h2>Teaching and mentoring</h2><p style="margin-bottom:4px">{cv['teaching']}</p><ul class="plain">{mentoring}</ul>
+<section style="break-inside:avoid"><h2>Teaching and mentoring</h2><p style="margin-bottom:4px">{cv['teaching']}</p><ul class="plain">{mentoring}</ul></section>
 <h2>Professional service</h2><ul class="plain">{service}</ul>
 <h2>Technical skills</h2><div class="sk">{skills}</div>
 <h2>References</h2><p>{E(ac['references'])}</p>
