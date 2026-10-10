@@ -74,7 +74,7 @@ def build_cv(root, site, papers):
         '<div class="emp ind">' + "".join(f"<p>{r}</p>" for r in g["roles"])
         + "".join(f'<p class="sub">{l}</p>' for l in g["lines"]) + "</div>" for g in cv["employment"])
     edu = "".join(
-        f'<div class="edu ind"><p>{e["degree"]}</p>' + (f'<p class="th">Thesis: {e["thesis"]}</p>' if e.get("thesis") else "") + "".join(f'<p class="th">{x}</p>' for x in e.get("extra", [])) + "</div>"
+        f'<div class="edu ind"><p>{e["degree"]}</p>' + (f'<p class="th">Thesis: {e["thesis"]}</p>' if e.get("thesis") else "") + "</div>"
         for e in cv["education"])
     awards = "".join(f'<li>{", ".join(x for x in (a["title"], a.get("org"), a["year"]) if x)}</li>' for a in cv["awards"])
     skills = "".join(f'<p><b>{s["label"]}:</b> {s["text"]}</p>' for s in cv["skills"])

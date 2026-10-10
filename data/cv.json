@@ -29,17 +29,22 @@
         "Department of Physics, University of Tehran, Iran",
         "Topic: CMOS-compatible Solid-State Devices Based on 2D Materials"
       ]
+    },
+    {
+      "roles": [
+        "Visiting Researcher (Mar. 2018 - Sep. 2018)"
+      ],
+      "lines": [
+        "Department of Physics, Sapienza Università di Roma, Italy",
+        "Supervisor: Prof. Giorgio Parisi",
+        "Topic: Statistical properties of harmonic spheres near jamming"
+      ]
     }
   ],
   "education": [
     {
       "degree": "PhD in Solid-State Physics, University of Tehran, Iran (2019)",
-      "thesis": "Charge Transport in Metal-Oxide Nano-Structures for Photovoltaic and Optoelectronic Applications",
-      "extra": [
-        "Visiting Researcher (Mar. 2018 - Sep. 2018), Department of Physics, Sapienza Università di Roma, Italy",
-        "Supervisor: Prof. Giorgio Parisi",
-        "Topic: Statistical properties of harmonic spheres near jamming"
-      ]
+      "thesis": "Charge Transport in Metal-Oxide Nano-Structures for Photovoltaic and Optoelectronic Applications"
     },
     {
       "degree": "MSc in Nanoscience and Nanotechnology, University of Tehran, Iran (2014)",
