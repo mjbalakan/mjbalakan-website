@@ -197,6 +197,20 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .spot .side{display:flex;flex-direction:column;gap:10px;min-width:0}
 .spot .side .results{margin:0}
 .lab img{opacity:.5}
+.earlier2{margin-top:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line);display:grid;gap:24px}
+.earlier2 .txt{display:flex;flex-direction:column;gap:10px;max-width:70ch}
+.earlier2 .txt h3{font-size:1.35rem}
+.earlier2 .txt p{color:var(--muted)}
+.ethemes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:980px){.ethemes{grid-template-columns:1fr}}
+.etheme{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.etheme h4{margin:0;font-family:var(--f-body);font-weight:600;font-size:1.05rem;line-height:1.3}
+.etheme p{color:var(--muted);font-size:.93rem;line-height:1.55;flex:1}
+.efacts{list-style:none;margin:6px 0 0;padding:0;display:grid}
+.efacts a{display:grid;grid-template-columns:7.6rem minmax(0,1fr);gap:12px;align-items:baseline;padding:9px 0;border-top:1px solid var(--line);text-decoration:none}
+.efacts .k{font-family:var(--f-display);font-weight:750;font-stretch:108%;color:var(--accent);white-space:nowrap}
+.efacts .t{font-size:.88rem;color:var(--fg)}
+.efacts a:hover .t{color:var(--accent)}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -336,8 +350,9 @@ def build_index():
         f'<li><a href="papers/{r["slug"]}.html"><span class="k">{r["k"]}</span><span class="t">{E(r["t"])}</span></a></li>'
         for r in sp["results"])
     facts = "".join(
-        f'<a class="fact" href="papers/{f["slug"]}.html"><span class="k">{E(f["k"])}</span><span class="t">{E(f["t"])}</span></a>'
-        for f in ea["facts"])
+        f'<article class="etheme"><span class="mono">{E(t["span"])}</span><h4>{E(t["title"])}</h4><p>{E(t["text"])}</p><ul class="efacts">'
+        + "".join(f'<li><a href="papers/{f["slug"]}.html"><span class="k">{E(f["k"])}</span><span class="t">{E(f["t"])}</span></a></li>' for f in t["facts"])
+        + '</ul></article>' for t in ea["themes"])
     tl = "".join(
         f'<li><span class="when">{E(n["when"])}</span><span class="what"><span class="tag">{E(n["tag"])}</span>'
         + (f'<a href="papers/{n["slug"]}.html"><b>{E(n["title"])}</b></a>' if n.get("slug") else f'<b>{E(n["title"])}</b>')
@@ -381,9 +396,9 @@ def build_index():
 <div class="side"><span class="mono">Key results</span><ul class="results">{results}</ul></div>
 </div>
 <figure class="lab"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112" loading="lazy"><figcaption>{E(lab['cap'])}</figcaption></figure>
-<div class="earlier">
+<div class="earlier2">
 <div class="txt"><span class="mono">{E(ea['span'])}</span><h3>{E(ea['title'])}</h3><p>{E(ea['text'])}</p></div>
-<div class="facts">{facts}</div>
+<div class="ethemes">{facts}</div>
 </div>
 </div></section>
 

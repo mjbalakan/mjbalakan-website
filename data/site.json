@@ -187,29 +187,65 @@
     "cap": "With a processed wafer and the low-noise measurement rack wired to the cryostat, Prof. Ji Ung Lee's Lab, CNSE NY, 17th Nov. 2024."
   },
   "earlier": {
-    "span": "2015 – 2021 · University of Tehran",
+    "span": "2014 – 2021 · University of Tehran",
     "title": "Earlier: 2D materials and silicon devices",
-    "text": "Before quantum devices I worked on combining 2D materials and polymers with silicon for sensors, solar cells and future chips, and on modeling how charge moves through disordered materials.",
-    "facts": [
+    "text": "Before quantum devices, I worked on bringing new materials into silicon technology for light sensors, solar cells and future chips, combining device experiments with physical modeling.",
+    "themes": [
       {
-        "k": "First",
-        "t": "growth of borophene, a one-atom-thick metal, by chemical vapor deposition",
-        "slug": "cvd-borophene-diborane"
+        "span": "2018 – 2021",
+        "title": "CMOS-compatible devices from 2D materials",
+        "text": "Graphene lets light pass into the silicon beneath it, which makes graphene–silicon junctions attractive for solar cells and detectors. We showed that charge crossing this 2D/3D interface is limited by how slowly electrons leave the graphene plane, and calculated the efficiency limit of graphene–silicon solar cells. We also grew borophene, a one-atom-thick metal, by chemical vapor deposition, a scalable route to 2D interconnects.",
+        "facts": [
+          {
+            "k": "10⁶×",
+            "t": "slower charge transfer than gold–silicon contacts",
+            "slug": "graphene-silicon-schottky-kinetics"
+          },
+          {
+            "k": "25.5%",
+            "t": "efficiency limit of graphene/silicon solar cells",
+            "slug": "graphene-semiconductor-solar-cell-efficiency-limit"
+          },
+          {
+            "k": "First",
+            "t": "CVD growth of borophene",
+            "slug": "cvd-borophene-diborane"
+          }
+        ]
       },
       {
-        "k": "10⁶×",
-        "t": "slower charge transfer across graphene–silicon than gold–silicon contacts",
-        "slug": "graphene-silicon-schottky-kinetics"
+        "span": "2017 – 2020",
+        "title": "Hybrid organic–silicon optoelectronics",
+        "text": "Coating silicon with a conductive polymer gives junctions that are made at low temperature from solution and work over large areas. We worked out how charge moves through them, injection over an interface barrier in one direction and space-charge-limited flow through the polymer in the other. On this platform we built position-sensitive detectors and self-powered photodiodes that stay stable after long exposure to air.",
+        "facts": [
+          {
+            "k": ">100 mV/mm",
+            "t": "position sensitivity (APL Editor's Pick)",
+            "slug": "pedot-pss-silicon-position-sensitive-detectors"
+          },
+          {
+            "k": "10⁶ V/W",
+            "t": "photovoltage responsivity with pW-level noise",
+            "slug": "pedot-pss-silicon-photodiode-responsivity"
+          }
+        ]
       },
       {
-        "k": "25.5%",
-        "t": "efficiency limit calculated for graphene/silicon solar cells",
-        "slug": "graphene-semiconductor-solar-cell-efficiency-limit"
-      },
-      {
-        "k": ">100 mV/mm",
-        "t": "position sensitivity of polymer–silicon light sensors (APL Editor's Pick)",
-        "slug": "pedot-pss-silicon-position-sensitive-detectors"
+        "span": "2014 – 2018",
+        "title": "Solar cells and physical modeling",
+        "text": "Monte Carlo simulations showed that confining a porous oxide network steers electrons toward the collecting electrode. We then built column-structured dye-sensitized solar cells and measured longer electron lifetimes and diffusion lengths. With COMSOL and numerical models, we also explained how plasma growth produces self-organized, single-standing carbon nanotubes.",
+        "facts": [
+          {
+            "k": "~3×",
+            "t": "longer electron diffusion length in patterned TiO₂",
+            "slug": "quasi-2d-porous-tio2-electron-transport"
+          },
+          {
+            "k": "10⁵×",
+            "t": "better detection of faint UV light",
+            "slug": "ultra-low-intensity-uv-detection-tio2"
+          }
+        ]
       }
     ]
   },
