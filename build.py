@@ -8,7 +8,9 @@ import json, html, os, re, datetime, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SITE = json.loads((ROOT / "data/site.json").read_text())
-PAPERS = json.loads((ROOT / "data/papers.json").read_text())
+_raw = (ROOT / "data/papers.json").read_text()
+# keep "Fe(Te,Se)" on one line: a word joiner after the comma stops browsers breaking there
+PAPERS = json.loads(_raw.replace("Fe(Te,Se)", "Fe(Te,\u2060Se)"))
 BASE = SITE["url"].rstrip("/")
 TODAY = datetime.date.today().isoformat()
 E = html.escape
