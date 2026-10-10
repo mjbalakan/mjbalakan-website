@@ -351,7 +351,7 @@ def person_ld():
 
 def pub_item(p, depth="./"):
     badge = f'<span class="badge">{E(p["badge"])}</span>' if p.get("badge") else ""
-    ls = [f'<a href="{depth}papers/{p["slug"]}.html">Summary</a>'] + links_of(p)
+    ls = links_of(p)
     return f"""<li class="pub"><div class="yr">{p['year']}</div><div>
 <h3><a href="{depth}papers/{p['slug']}.html">{E(p['title'])}</a></h3>
 <div class="au">{bold_me(p['authors'])}</div>
