@@ -1,0 +1,133 @@
+{
+  "_note": "CV-only content. Name, email and homepage come from site.json; publications come from papers.json (each paper's 'cv' block). Awards marked \"web\": true also appear on the homepage. Text fields may contain simple HTML (<i>, <b>, <u>, <a>).",
+  "updated": "May 2026",
+  "status_note": "(US Green-Card holder)",
+  "location": "San Jose, CA",
+  "address": [
+    "College of Nanotechnology, Science, and Engineering (CNSE)",
+    "State University of New York, University at Albany",
+    "257 Fuller Road, Albany, NY 12203"
+  ],
+  "phone": "(838) 900-9934",
+  "employment": [
+    {
+      "roles": ["Research Scientist (2025 - Present)", "Postdoctoral Fellow (2022 - 2024)"],
+      "lines": [
+        "College of Nanotechnology, Science, and Engineering (CNSE)",
+        "State University of New York, University at Albany",
+        "Topic: Topological Superconductors for Fault-Tolerant Quantum Computation"
+      ]
+    },
+    {
+      "roles": ["Postdoctoral Associate (2019 - 2021)"],
+      "lines": [
+        "Department of Physics, University of Tehran, Iran",
+        "Topic: CMOS-compatible Solid-State Devices Based on 2D Materials"
+      ]
+    }
+  ],
+  "education": [
+    {"degree": "PhD in Solid-State Physics, University of Tehran, Iran (2019)", "thesis": "Charge Transport in Metal-Oxide Nano-Structures for Photovoltaic and Optoelectronic Applications"},
+    {"degree": "MSc in Nanoscience and Nanotechnology, University of Tehran, Iran (2014)", "thesis": "Electron Transport in Nano-Structured Solar Cells"},
+    {"degree": "BSc in Physics, Urmia University, Iran (2012)"}
+  ],
+  "awards": [
+    {"title": "Chamran Postdoctoral Fellowship", "org": "Iran National Elites Foundation (INEF)", "year": "2020", "web": true},
+    {"title": "Outstanding PhD Thesis in Physics (nationwide)", "org": "Physical Society of Iran", "year": "2019", "web": true},
+    {"title": "Outstanding PhD Dissertation in Physical Sciences", "org": "University of Tehran", "year": "2019", "web": true},
+    {"title": "INEF Graduate Scholarship", "year": "2016 - 2018", "web": true},
+    {"title": "Ranked 10th nationally in the PhD entrance examination", "year": "2014"},
+    {"title": "Graduated with distinction, MSc in Physics", "year": "2014"},
+    {"title": "Ranked 19th nationally in the MSc entrance examination", "year": "2012"},
+    {"title": "Graduated with distinction, BSc in Physics", "year": "2012"}
+  ],
+  "skills": [
+    {"label": "Device fabrication and structural characterization", "text": "cleanroom nanofabrication, process development, electron-beam lithography (EBL), focused ion beam (FIB), scanning electron microscopy (SEM), atomic force microscopy (AFM), reactive ion etching (RIE), Raman and optical spectroscopy, thin film deposition (PVD, e-beam evaporation, CVD, PECVD), 2D materials, wide bandgap oxides, organic semiconductors, topological insulators, and topological superconductors."},
+    {"label": "Electrical characterization", "text": "DC/AC semiconductor parameter analysis (SMU, LCR, etc.), optoelectronic characterization tests (photovoltaic cells, optical detectors/sensors), low-noise/precision measurements (lock-in amplifiers, Atto-sense modules, low-temperature LPFs), cryogenic systems, quantum transport, phase-sensitive magnetic/flux measurements."},
+    {"label": "Computation, data analysis, and automation", "text": "Python, Mathematica, LabVIEW, KLayout (layout/mask design), statistical analysis, instrument automation."}
+  ],
+  "service": [
+    "Peer review for scientific journals including Physical Review Letters, 2D Materials, Applied Physics Letters, and Nanotechnology (<a class=\"plain\" href=\"https://orcid.org/0000-0002-2117-6668\">ORCID</a>).",
+    "Served as a committee member for the Physical Society of Iran symposium, 2018."
+  ],
+  "web_reviewer": "Physical Review Letters, 2D Materials, Applied Physics Letters, Nanotechnology",
+  "research": [
+    {
+      "lab": "CNSE, University at Albany, USA (Prof. Ji Ung Lee’s lab)",
+      "topic": "Topological superconductivity for fault-tolerant quantum computation",
+      "items": [
+        "Electrical transport studies of topological superconductors in collaboration with Stony Brook University and BNL (Prof. Qiang Li and Prof. Genda Gu).",
+        "Developed processes for end-to-end fabrication of nanoscale quantum devices.",
+        "Upgraded a closed-cycle cryostat, designed and implemented cryogenic low-pass filters (LPFs) for precision electrical measurements, and developed Python scripts for instrument automation.",
+        "Demonstrated half-integer flux quantization, intrinsic magnetization of the superconducting condensate, and Aharonov-Bohm oscillations of edge states in mesoscopic Fe(Te,Se) devices."
+      ]
+    },
+    {
+      "lab": "Laboratory for nanotechnology, University of Tehran, Iran (Prof. Abdi’s lab)",
+      "topic": "CMOS-compatible solid-state devices based on 2D materials",
+      "items": [
+        "Investigated charge transport across graphene-silicon 2D/3D Schottky junctions.",
+        "Developed a model for the fundamental efficiency of graphene-based solar cells.",
+        "Fabricated and characterized infrared detectors based on 2D MoS2 layers.",
+        "Developed scalable position-sensitive detectors based on hybrid organic/inorganic PEDOT:PSS/Silicon heterojunctions (<i>APL Editor’s Pick</i>).",
+        "Pioneered a scalable method for synthesis of 2D borophene metallic layers using chemical vapor deposition."
+      ]
+    },
+    {
+      "lab": "Department of Physics, University of Tehran (Prof. Abdi’s and Prof. Arzi’s joint group)",
+      "items": [
+        "Fabrication and characterization of nanostructured solar cells based on dye-sensitized solar cells (solar simulator, IV, quantum efficiency, carrier lifetime and diffusion length measurement).",
+        "Monte-Carlo simulation of charge transport in disordered wide band-gap semiconductors for photovoltaic and optoelectronic applications.",
+        "Computer modeling for PECVD growth of single-standing carbon nanotubes."
+      ]
+    },
+    {
+      "lab": "Nanoelectronic laboratory, Tarbiat Modares University, Iran (Dr. Sara Darbari’s lab)",
+      "items": [
+        "Investigated sound-driven CNT-based tribo-electric nanogenerator in sonic array.",
+        "Developed a piezo-phototronic device based on graphene/MoS2 heterostructure."
+      ]
+    }
+  ],
+  "teaching": "Teaching Assistant, University of Tehran (2012–2018): Quantum Mechanics (undergraduate), Advanced Solid-State Physics &amp; Laboratory (graduate), Advanced Quantum Mechanics (graduate)",
+  "mentoring": [
+    "Mentored Ph.D. researcher Daniel Titcomb in experimental studies of topological superconductors (Dr. Lee’s group).",
+    "Mentored graduate researcher AliAkbar Noroozi in graphene-silicon optical detectors; work contributed to a Ph.D. thesis and two publications (Dr. Abdi’s group).",
+    "Mentored graduate student Mahdieh Gholami on CVD growth of two-dimensional MoS<sub>2</sub> for infrared detectors; work contributed to a master’s thesis and a publication (Dr. Abdi’s group)."
+  ],
+  "invited_talks": [
+    "<i>“Half-integer winding of order parameter &amp; intrinsic magnetization of superconducting condensate in Fe(Te,Se)”</i>, GRC correlated electron systems, Mount Holyoke College, MA, USA (2026).",
+    "“<i>Topological superconductivity in Fe(Te,Se)</i>”, Laboratory for Physical Sciences (LPS), College Park, MD, USA (2025).",
+    "“<i>Charge transport at graphene-silicon 2D/3D interface</i>”, <i>TMU</i>, Tehran, Iran (2020).",
+    "“<i>Negative photoconductivity in ZnO nanowires</i>”, IPM, Tehran, Iran (2018)."
+  ],
+  "conferences": [
+    "<u>M. J. Balakan</u>, Half-integer winding of the order parameter and intrinsic magnetization of the superconducting condensate in mesoscopic Fe(Te,Se) devices, GRC Correlated Electron Systems (2026).",
+    "<u>M. J. Balakan</u>, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and JU. Lee, Topological superconductivity in Fe(Te,Se) mesoscopic devices, APS Global Meeting (2026).",
+    "Additional presentations at Iranian Physical Society meetings and nanostructured solar cell conferences (2014–2018)."
+  ],
+  "publication_order": [
+    "intrinsic-magnetization-fete-se",
+    "half-integer-winding-order-parameter",
+    "aharonov-bohm-spin-polarized-edge-transport",
+    "half-quantum-vorticity-iron-based-superconductor",
+    "cvd-borophene-diborane",
+    "graphene-silicon-schottky-kinetics",
+    "pedot-pss-silicon-photodiode-responsivity",
+    "graphene-semiconductor-solar-cell-efficiency-limit",
+    "pedot-pss-silicon-charge-transport-mechanism",
+    "sequentially-assembled-graphene-on-silicon",
+    "zno-nanowires-bulk-to-surface-conductivity",
+    "pedot-pss-silicon-position-sensitive-detectors",
+    "tio2-mos2-rgo-infrared-position-sensitive-detectors",
+    "sound-driven-cnt-triboelectric-nanogenerator",
+    "ultra-low-intensity-uv-detection-tio2",
+    "kinetic-monte-carlo-multiple-trapping",
+    "localized-plasma-carbon-nanotube-nanopatterning",
+    "quasi-2d-porous-tio2-electron-transport",
+    "rgo-mos2-piezophototronic-device",
+    "local-collection-efficiency-nanocrystalline-solar-cells",
+    "patterned-tio2-dye-sensitized-solar-cells",
+    "monte-carlo-random-walk-confined-porous-tio2"
+  ]
+}

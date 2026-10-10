@@ -18,7 +18,12 @@
       "The magnetoresistance shows dual flux quantization: periodic in both the external magnetic field and the DC current.",
       "A minimal model with Rashba coupling and an anisotropic out-of-plane interaction explains the data.",
       "Evidence for spin-polarized superconductivity at the device scale, relevant to superconducting spintronics and quantum information."
-    ]
+    ],
+    "cv": {
+      "authors": "M. J. Balakan, S. Heidari, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and J. U. Lee",
+      "tail": "will be published in Phys. Rev. B. Letters (2026)",
+      "badge": "Editors’ suggestion"
+    }
   },
   {
     "slug": "half-integer-winding-order-parameter",
@@ -37,7 +42,11 @@
       "Superconducting quantum oscillations with a period of half the flux quantum, Φ₀/2.",
       "The oscillations are modulated by a global current–field symmetry, consistent with strong spin–orbit coupling in the condensate.",
       "Points toward non-Abelian excitations and scalable topological qubits."
-    ]
+    ],
+    "cv": {
+      "authors": "M. J. Balakan, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and J. U. Lee",
+      "tail": "submitted (2026)"
+    }
   },
   {
     "slug": "aharonov-bohm-spin-polarized-edge-transport",
@@ -56,7 +65,11 @@
       "Two periodicities in the magnetoresistance: h/e from ballistic edge interference and h/2e from fluxoid quantization of bulk Cooper pairs.",
       "The Aharonov–Bohm oscillations appear only below the superconducting transition and show current–field symmetry.",
       "Their temperature dependence follows a helical Luttinger liquid model, consistent with edge states of a topological superconductor."
-    ]
+    ],
+    "cv": {
+      "authors": "M. J. Balakan, S. Heidari, G. Gu, Q. Li, D. Titcombe, Z. Xiao, H. Frost, E. Bhatia, C. Kow, P. Rao, K. Watanabe, T. Taniguchi, and J. U. Lee",
+      "tail": "submitted (2025)"
+    }
   },
   {
     "slug": "half-quantum-vorticity-iron-based-superconductor",
@@ -72,7 +85,11 @@
       "Distinct signatures of trapped half-integer fluxoids.",
       "Oscillations modulated by a background symmetry set by the relative orientation of the DC bias current and the perpendicular magnetic field, consistent with strong spin–orbit coupling.",
       "A step toward non-Abelian excitations in quantum materials and scalable topological qubits."
-    ]
+    ],
+    "cv": {
+      "authors": "M. J. Balakan, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and J. U. Lee",
+      "tail": "(2025) [arXiv:2505.01522]"
+    }
   },
   {
     "slug": "cvd-borophene-diborane",
@@ -92,7 +109,12 @@
       "Average thickness 4.2 Å, χ₃ crystal structure, metallic conductivity.",
       "Evidence for stacked bilayer and trilayer borophene.",
       "Systematic study of how temperature, deposition rate and pressure control growth."
-    ]
+    ],
+    "cv": {
+      "authors": "A. Mazaheri, M. Javadi, and Y. Abdi",
+      "journal": "ACS Applied Materials & Interfaces",
+      "ref": "13(7), 8844-8850"
+    }
   },
   {
     "slug": "graphene-silicon-schottky-kinetics",
@@ -109,7 +131,12 @@
       "Across graphene–Si it is about 10 cm/s, nearly six orders of magnitude smaller.",
       "The effective out-of-plane velocity of carriers in graphene is about 1 cm/s.",
       "Transfer velocity rises almost exponentially with Schottky barrier height, explained by T¹ scaling theory with barrier-dependent scattering."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, AA. Noroozi, and Y. Abdi",
+      "journal": "Physical Review Applied",
+      "ref": "14, 064048"
+    }
   },
   {
     "slug": "graphene-semiconductor-solar-cell-efficiency-limit",
@@ -124,7 +151,12 @@
       "Under ideal conditions efficiency exceeds 25% for bandgaps between 1.1 and 1.7 eV.",
       "Efficiency limits: 25.5% for graphene/silicon and 27.5% for graphene/GaAs.",
       "Efficiency falls almost linearly with temperature: 0.076 %/K (graphene/Si) and 0.058 %/K (graphene/GaAs)."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi",
+      "journal": "Applied Physics Letters",
+      "ref": "117, 053902"
+    }
   },
   {
     "slug": "pedot-pss-silicon-photodiode-responsivity",
@@ -139,7 +171,12 @@
       "Self-powered photovoltage responsivity of 10⁶ V/W.",
       "Noise-equivalent power of 10 pW/√Hz and detectivity up to 10¹⁰ Jones.",
       "Thermal noise identified as the main limit on performance."
-    ]
+    ],
+    "cv": {
+      "authors": "AH. Mosaddegh, AA. Noroozi, M. Javadi, and Y. Abdi",
+      "journal": "Applied Physics Letters",
+      "ref": "117, 073301"
+    }
   },
   {
     "slug": "sequentially-assembled-graphene-on-silicon",
@@ -157,7 +194,12 @@
       "Sequentially assembled CVD graphene layers stay electronically uncoupled.",
       "In-plane current scales with the number of assembled layers.",
       "Layer thickness strongly modifies charge injection and the reverse saturation current of the graphene–silicon junction."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, AA. Noroozi, A. Mazaheri, Y. Abdi",
+      "journal": "Advanced Optical Materials",
+      "ref": "7, 1900470"
+    }
   },
   {
     "slug": "pedot-pss-silicon-charge-transport-mechanism",
@@ -173,7 +215,12 @@
       "Forward bias: space-charge-limited current through the PEDOT:PSS layer, trap-limited at low bias.",
       "Trap density about 5.6 × 10¹⁵ cm⁻³ with characteristic energy about 0.107 eV.",
       "The double-logarithmic forward characteristic marks a transition from the Mark–Helfrich to the Mott–Gurney regime."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, A. Mazaheri, H. Torbatiyan, Y. Abdi",
+      "journal": "Physical Review Applied",
+      "ref": "12, 034002"
+    }
   },
   {
     "slug": "zno-nanowires-bulk-to-surface-conductivity",
@@ -188,7 +235,12 @@
       "A continuous transition from positive to negative photoconductivity, centered at 48.9 kHz.",
       "A frequency-driven metal–insulator transition at room temperature, near the same frequency.",
       "A theory attributing both effects to switching between bulk and surface conduction."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, Y. Abdi",
+      "journal": "Applied Physics Letters",
+      "ref": "113, 051603"
+    }
   },
   {
     "slug": "pedot-pss-silicon-position-sensitive-detectors",
@@ -208,7 +260,13 @@
       "Nonlinearity below 3% and response correlation above 0.995.",
       "Response time under 4 ms for infrared illumination."
     ],
-    "featured": true
+    "featured": true,
+    "cv": {
+      "authors": "M. Javadi, M. Gholami, H. Torbatiyan, Y. Abdi",
+      "journal": "Applied Physics Letters",
+      "ref": "112, 113302",
+      "badge": "Editors’ Pick"
+    }
   },
   {
     "slug": "tio2-mos2-rgo-infrared-position-sensitive-detectors",
@@ -223,7 +281,12 @@
       "Photocurrent sensitivity above 5000 nA/mm and photovoltage sensitivity above 20 mV/mm.",
       "Nonlinearity below 1% and a correlation coefficient of 1.000 above 4 mW/cm².",
       "Lateral photovoltage explained by the band alignment of the asymmetric stack."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, M. Gholami, Y. Abdi",
+      "journal": "Journal of Material Chemistry C",
+      "ref": "6, 8444"
+    }
   },
   {
     "slug": "sound-driven-cnt-triboelectric-nanogenerator",
@@ -238,7 +301,12 @@
       "Carbon nanotube electrodes increase the effective surface area.",
       "A 1D phononic crystal of five steel slabs resonates near 4.3 kHz.",
       "About 4× higher output voltage and 7× higher output power inside the sonic array."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, A. Heidari, S. Darbari",
+      "journal": "Current Applied Physics",
+      "ref": "18, 361"
+    }
   },
   {
     "slug": "ultra-low-intensity-uv-detection-tio2",
@@ -253,7 +321,12 @@
       "Five orders of magnitude enhancement in ultra-low-intensity UV detection.",
       "Responsivity of about 0.1 A/W at 100 µW/cm² and 0.01 A/W at 14 µW/cm².",
       "The partitioned film behaves as a quasi-one-dimensional transport medium."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, H. Torbatiyan, Y. Abdi",
+      "journal": "Applied Physics Letters",
+      "ref": "111, 063113"
+    }
   },
   {
     "slug": "kinetic-monte-carlo-multiple-trapping",
@@ -268,7 +341,12 @@
       "Uses the full density of localized states instead of a truncated one.",
       "Adds an occupation index to account for filled trap sites.",
       "Validated across a broad range of disorder, Fermi level and temperature."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, Y. Abdi",
+      "journal": "Computer Physics Communications",
+      "ref": "221, 282"
+    }
   },
   {
     "slug": "localized-plasma-carbon-nanotube-nanopatterning",
@@ -283,7 +361,12 @@
       "The plasma localizes around the growth region and exerts a dielectrophoretic force on the nickel catalyst.",
       "Numerical simulations of the localized plasma reproduce the observed patterns.",
       "A low-cost route to nanotube arrays for photonic crystals and field-emission devices."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, Y. Abdi",
+      "journal": "Journal of Nanoparticle Research",
+      "ref": "19, 17"
+    }
   },
   {
     "slug": "quasi-2d-porous-tio2-electron-transport",
@@ -300,7 +383,12 @@
     "findings": [
       "Electron diffusion coefficient about ten times higher than in a conventional porous layer at high Fermi levels.",
       "About three times longer electron diffusion length."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, S. Alizadeh, Y. Khosravi, Y. Abdi",
+      "journal": "ChemPhysChem",
+      "ref": "17, 3542"
+    }
   },
   {
     "slug": "rgo-mos2-piezophototronic-device",
@@ -314,7 +402,12 @@
     "findings": [
       "MoS₂ raises photoresponsivity about 2.1× at 450 nm compared with graphene oxide alone.",
       "About 97% responsivity enhancement under combined illumination and 0.03% strain."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, S. Darbari, Y. Abdi, F. Ghasemi",
+      "journal": "IEEE Electron Device Letters",
+      "ref": "37, 677"
+    }
   },
   {
     "slug": "local-collection-efficiency-nanocrystalline-solar-cells",
@@ -328,7 +421,12 @@
     "findings": [
       "Derives a general form of the total collection efficiency, η = 1 − τ(IMPS)/τ(IMVS), valid for any solar cell.",
       "Proposes a direct way to estimate the electron diffusion length from IMPS and IMVS measurements."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, Y. Abdi, E. Arzi",
+      "journal": "Solar Energy",
+      "ref": "133, 549"
+    }
   },
   {
     "slug": "patterned-tio2-dye-sensitized-solar-cells",
@@ -341,7 +439,12 @@
     "summary": "A micro-patterned TiO₂ anode gives dye-sensitized solar cells faster electron transport and less recombination.",
     "findings": [
       "Patterning the nanoparticle layer increases both electron lifetime and diffusion coefficient."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Sajedi Alvar, M. Javadi, Y. Abdi, E. Arzi",
+      "journal": "Journal of Applied Physics",
+      "ref": "119, 114302"
+    }
   },
   {
     "slug": "monte-carlo-random-walk-confined-porous-tio2",
@@ -355,6 +458,11 @@
     "findings": [
       "Continuous-time random walk simulation of electron transport in porous TiO₂.",
       "Structural confinement induces directional diffusion, a route to higher internal quantum efficiency."
-    ]
+    ],
+    "cv": {
+      "authors": "M. Javadi, and Y. Abdi",
+      "journal": "Journal of Applied Physics",
+      "ref": "118, 064304"
+    }
   }
 ]

@@ -4,13 +4,15 @@
 Edit data/papers.json or data/site.json, then run:  python3 build.py
 Outputs: index.html, papers/<slug>.html, sitemap.xml, robots.txt, 404.html
 """
-import json, html, os, re, datetime, pathlib
+import json, html, os, re, sys, datetime, pathlib
+import cv_build
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SITE = json.loads((ROOT / "data/site.json").read_text())
 _raw = (ROOT / "data/papers.json").read_text()
 # keep "Fe(Te,Se)" on one line: a word joiner after the comma stops browsers breaking there
 PAPERS = json.loads(_raw.replace("Fe(Te,Se)", "Fe(Te,\u2060Se)"))
+CV = json.loads((ROOT / "data/cv.json").read_text())
 BASE = SITE["url"].rstrip("/")
 TODAY = datetime.date.today().isoformat()
 E = html.escape
@@ -324,7 +326,7 @@ def nav(depth):
     return f"""<nav class="nav" aria-label="Main"><div class="wrap">
 <a class="brand" href="{depth}">MJ <span>Balakan</span></a>
 <ul><li><a href="{h}#research">Research</a></li><li class="hide-s"><a href="{h}#publications">Publications</a></li>
-<li class="hide-s"><a href="{h}#news">News</a></li><li class="hide-s"><a href="{h}#experience">Experience</a></li><li><a href="{depth}files/MJBalakan_CV.pdf">CV</a></li><li><a href="{h}#contact">Contact</a></li></ul>
+<li class="hide-s"><a href="{h}#news">News</a></li><li class="hide-s"><a href="{h}#experience">Experience</a></li><li><a href="{depth}cv.html">CV</a></li><li><a href="{h}#contact">Contact</a></li></ul>
 </div></nav>"""
 
 def footer():
@@ -377,8 +379,8 @@ def build_index():
         + f'<span>{E(n["detail"])}</span></span></li>' for n in s["timeline"])
     cv = "".join(f'<li><span class="when">{E(n["when"])}</span><span class="what"><b>{E(n["title"])}</b><span>{E(n["detail"])}</span></span></li>' for n in s["career"])
     skills = "".join(f'<div class="skillgroup"><span class="mono">{E(g["group"])}</span><div class="chips">{"".join(f"<span>{E(x)}</span>" for x in g["items"])}</div></div>' for g in s["skills"])
-    awards = "".join(f'<li>{E(a["title"])} <span>· {E(a["detail"])}, {E(a["when"])}</span></li>' for a in s["awards"] if a["when"] != "Review")
-    review = next((a for a in s["awards"] if a["when"] == "Review"), None)
+    awards = "".join(f'<li>{E(a["title"])} <span>· {", ".join(E(x) for x in (a.get("org"), a["year"]) if x)}</span></li>' for a in CV["awards"] if a.get("web"))
+    review = {"detail": CV["web_reviewer"]} if CV.get("web_reviewer") else None
     profiles = "".join(f'<li><a href="{E(p["url"])}" target="_blank" rel="noopener"><span>{E(p["name"])}</span><span>{E(p["handle"])}</span></a></li>' for p in s["profiles"])
     featured = [p for p in PAPERS if p.get("featured")]
     rest = [p for p in PAPERS if not p.get("featured")]
@@ -509,14 +511,16 @@ def main():
     (out / "index.html").write_text(build_index())
     for p in PAPERS:
         (out / "papers" / f"{p['slug']}.html").write_text(build_paper(p))
-    urls = [BASE + "/"] + [f"{BASE}/papers/{p['slug']}.html" for p in PAPERS]
+    urls = [BASE + "/", BASE + "/cv.html"] + [f"{BASE}/papers/{p['slug']}.html" for p in PAPERS]
     sm = "\n".join(f"  <url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>" for u in urls)
     (out / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}\n</urlset>\n')
     (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
     nf = head("Page not found · MJ Balakan", "Page not found.", "404.html", "/", {"@context": "https://schema.org", "@type": "WebPage"}) + nav("/") + \
         '<main class="paper"><div class="wrap"><h1>Page not found</h1><p style="margin-top:16px"><a href="/">Go to the homepage</a></p></div></main>' + footer() + "</body></html>"
     (out / "404.html").write_text(nf)
-    print(f"Built index + {len(PAPERS)} paper pages")
+    cv_build.build_cv(ROOT, SITE, PAPERS)
+    pdf = cv_build.make_pdf(ROOT) if "--no-pdf" not in sys.argv else False
+    print(f"Built index + {len(PAPERS)} paper pages + cv.html" + (" + CV PDF" if pdf else ""))
 
 if __name__ == "__main__":
     main()
