@@ -26,7 +26,7 @@ CSS = r"""
 /* Layout: one 1120px column; hero = text + portrait over a live flux-oscillation field; sections stack with mono "readout" labels */
 :root{
   --bg:#0a0e1a; --surface:#111729; --raise:#18203a; --line:#25304d;
-  --fg:#e9edf6; --muted:#9aa6bf; --accent:#f6a33c; --accent-2:#d2457a;
+  --fg:#e9edf6; --strong:#fff; --muted:#9aa6bf; --accent:#f6a33c; --accent-2:#d2457a;
   --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
   --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -34,10 +34,10 @@ CSS = r"""
 }
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){
   --bg:#f5f6fa; --surface:#ffffff; --raise:#eef0f6; --line:#d8dce8;
-  --fg:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.2; color-scheme:light}}
+  --fg:#111629; --strong:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.2; color-scheme:light}}
 :root[data-theme="light"]{
   --bg:#f5f6fa; --surface:#ffffff; --raise:#eef0f6; --line:#d8dce8;
-  --fg:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.2; color-scheme:light}
+  --fg:#111629; --strong:#111629; --muted:#4f5a73; --accent:#b4530a; --accent-2:#a3245e; --field-opacity:.2; color-scheme:light}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -72,7 +72,7 @@ p{margin:0}
 .hero h1{font-family:var(--f-body);font-stretch:100%;font-size:clamp(2rem,4.4vw,3.2rem);font-weight:600;letter-spacing:-.015em;line-height:1.1;margin-block:14px 16px}
 .hero h1 .alt{display:block;font-size:.5em;font-weight:500;color:var(--muted);margin-top:.45em;letter-spacing:0}
 .lead{font-size:clamp(1.02rem,1.6vw,1.14rem);max-width:62ch;color:var(--fg)}
-.lead strong{font-weight:600;color:var(--accent)}
+.lead strong{font-weight:600;color:var(--strong)}
 .now{margin-top:18px;color:var(--muted);max-width:60ch}
 .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:8px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font-weight:500;font-size:.95rem}
