@@ -397,7 +397,7 @@ def build_index():
 <p class="lead">{s['lead']}</p>
 <p class="now">{E(s['now'])}</p>
 <div class="cta">
-<a class="btn primary" href="files/MJBalakan_CV.pdf">Download CV</a>
+<a class="btn primary" href="files/MJBalakan_CV.pdf" target="_blank" rel="noopener">Download CV</a>
 <a class="btn" href="{E(s['profiles'][0]['url'])}" target="_blank" rel="noopener">Google Scholar</a>
 <a class="btn" href="{E(s['profiles'][1]['url'])}" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#contact">Email</a>
