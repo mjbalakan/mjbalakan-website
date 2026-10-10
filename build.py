@@ -402,7 +402,7 @@ def build_index():
 <a class="btn" href="{E(s['profiles'][1]['url'])}" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#contact">Email</a>
 </div>
-<p class="statline">{st['papers']} papers & preprints · {st['citations']} citations · h-index {st['h_index']}</p>
+<p class="statline mono" style="text-transform:none;letter-spacing:.04em">Φ₀ = h/2e ≈ 2.068 × 10⁻¹⁵ Wb</p>
 </div>
 <figure class="portrait" style="margin:0"><img src="img/mj-balakan.jpg" alt="Portrait of Mohammad Javadi Balakan" width="800" height="800"></figure>
 </div></header>
