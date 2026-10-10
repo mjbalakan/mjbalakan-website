@@ -11,7 +11,10 @@
   "phone": "(838) 900-9934",
   "employment": [
     {
-      "roles": ["Research Scientist (2025 - Present)", "Postdoctoral Fellow (2022 - 2024)"],
+      "roles": [
+        "Research Scientist (2025 - Present)",
+        "Postdoctoral Fellow (2022 - 2024)"
+      ],
       "lines": [
         "College of Nanotechnology, Science, and Engineering (CNSE)",
         "State University of New York, University at Albany",
@@ -19,32 +22,92 @@
       ]
     },
     {
-      "roles": ["Postdoctoral Associate (2019 - 2021)"],
+      "roles": [
+        "Postdoctoral Associate (2019 - 2021)"
+      ],
       "lines": [
         "Department of Physics, University of Tehran, Iran",
         "Topic: CMOS-compatible Solid-State Devices Based on 2D Materials"
       ]
+    },
+    {
+      "roles": [
+        "Visiting Researcher (Mar. 2018 - Sep. 2018)"
+      ],
+      "lines": [
+        "Department of Physics, Sapienza Università di Roma, Italy",
+        "Supervisor: Prof. Giorgio Parisi",
+        "Topic: Statistical properties of harmonic spheres near jamming"
+      ]
     }
   ],
   "education": [
-    {"degree": "PhD in Solid-State Physics, University of Tehran, Iran (2019)", "thesis": "Charge Transport in Metal-Oxide Nano-Structures for Photovoltaic and Optoelectronic Applications"},
-    {"degree": "MSc in Nanoscience and Nanotechnology, University of Tehran, Iran (2014)", "thesis": "Electron Transport in Nano-Structured Solar Cells"},
-    {"degree": "BSc in Physics, Urmia University, Iran (2012)"}
+    {
+      "degree": "PhD in Solid-State Physics, University of Tehran, Iran (2019)",
+      "thesis": "Charge Transport in Metal-Oxide Nano-Structures for Photovoltaic and Optoelectronic Applications"
+    },
+    {
+      "degree": "MSc in Nanoscience and Nanotechnology, University of Tehran, Iran (2014)",
+      "thesis": "Electron Transport in Nano-Structured Solar Cells"
+    },
+    {
+      "degree": "BSc in Physics, Urmia University, Iran (2012)"
+    }
   ],
   "awards": [
-    {"title": "Chamran Postdoctoral Fellowship", "org": "Iran National Elites Foundation (INEF)", "year": "2020", "web": true},
-    {"title": "Outstanding PhD Thesis in Physics (nationwide)", "org": "Physical Society of Iran", "year": "2019", "web": true},
-    {"title": "Outstanding PhD Dissertation in Physical Sciences", "org": "University of Tehran", "year": "2019", "web": true},
-    {"title": "INEF Graduate Scholarship", "year": "2016 - 2018", "web": true},
-    {"title": "Ranked 10th nationally in the PhD entrance examination", "year": "2014"},
-    {"title": "Graduated with distinction, MSc in Physics", "year": "2014"},
-    {"title": "Ranked 19th nationally in the MSc entrance examination", "year": "2012"},
-    {"title": "Graduated with distinction, BSc in Physics", "year": "2012"}
+    {
+      "title": "Chamran Postdoctoral Fellowship",
+      "org": "Iran National Elites Foundation (INEF)",
+      "year": "2020",
+      "web": true
+    },
+    {
+      "title": "Outstanding PhD Thesis in Physics (nationwide)",
+      "org": "Physical Society of Iran",
+      "year": "2019",
+      "web": true
+    },
+    {
+      "title": "Outstanding PhD Dissertation in Physical Sciences",
+      "org": "University of Tehran",
+      "year": "2019",
+      "web": true
+    },
+    {
+      "title": "INEF Graduate Scholarship",
+      "year": "2016 - 2018",
+      "web": true
+    },
+    {
+      "title": "Ranked 10th nationally in the PhD entrance examination",
+      "year": "2014"
+    },
+    {
+      "title": "Graduated with distinction, MSc in Physics",
+      "year": "2014"
+    },
+    {
+      "title": "Ranked 19th nationally in the MSc entrance examination",
+      "year": "2012"
+    },
+    {
+      "title": "Graduated with distinction, BSc in Physics",
+      "year": "2012"
+    }
   ],
   "skills": [
-    {"label": "Device fabrication and structural characterization", "text": "cleanroom nanofabrication, process development, electron-beam lithography (EBL), focused ion beam (FIB), scanning electron microscopy (SEM), atomic force microscopy (AFM), reactive ion etching (RIE), Raman and optical spectroscopy, thin film deposition (PVD, e-beam evaporation, CVD, PECVD), 2D materials, wide bandgap oxides, organic semiconductors, topological insulators, and topological superconductors."},
-    {"label": "Electrical characterization", "text": "DC/AC semiconductor parameter analysis (SMU, LCR, etc.), optoelectronic characterization tests (photovoltaic cells, optical detectors/sensors), low-noise/precision measurements (lock-in amplifiers, Atto-sense modules, low-temperature LPFs), cryogenic systems, quantum transport, phase-sensitive magnetic/flux measurements."},
-    {"label": "Computation, data analysis, and automation", "text": "Python, Mathematica, LabVIEW, KLayout (layout/mask design), statistical analysis, instrument automation."}
+    {
+      "label": "Device fabrication and structural characterization",
+      "text": "cleanroom nanofabrication, process development, electron-beam lithography (EBL), focused ion beam (FIB), scanning electron microscopy (SEM), atomic force microscopy (AFM), reactive ion etching (RIE), Raman and optical spectroscopy, thin film deposition (PVD, e-beam evaporation, CVD, PECVD), 2D materials, wide bandgap oxides, organic semiconductors, topological insulators, and topological superconductors."
+    },
+    {
+      "label": "Electrical characterization",
+      "text": "DC/AC semiconductor parameter analysis (SMU, LCR, etc.), optoelectronic characterization tests (photovoltaic cells, optical detectors/sensors), low-noise/precision measurements (lock-in amplifiers, Atto-sense modules, low-temperature LPFs), cryogenic systems, quantum transport, phase-sensitive magnetic/flux measurements."
+    },
+    {
+      "label": "Computation, data analysis, and automation",
+      "text": "Python, Mathematica, LabVIEW, KLayout (layout/mask design), statistical analysis, instrument automation."
+    }
   ],
   "service": [
     "Peer review for scientific journals including Physical Review Letters, 2D Materials, Applied Physics Letters, and Nanotechnology (<a class=\"plain\" href=\"https://orcid.org/0000-0002-2117-6668\">ORCID</a>).",
