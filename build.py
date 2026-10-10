@@ -398,7 +398,7 @@ def build_index():
 <p class="lead">{s['lead']}</p>
 <p class="now">{E(s['now'])}</p>
 <div class="cta">
-<span class="cvseg" role="group" aria-label="Download CV"><a href="files/MJBalakan_Resume.pdf" target="_blank" rel="noopener">2-page resume</a><a href="files/MJBalakan_CV.pdf" target="_blank" rel="noopener">Full CV</a></span>
+<a class="btn primary" href="cv.html" target="_blank" rel="noopener">Resume</a>
 <a class="btn" href="{E(s['profiles'][0]['url'])}" target="_blank" rel="noopener">Google Scholar</a>
 <a class="btn" href="{E(s['profiles'][1]['url'])}" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="#contact">Email</a>
