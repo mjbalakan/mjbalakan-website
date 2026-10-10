@@ -296,6 +296,8 @@ def links_of(p, depth="./"):
     return out
 
 def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/mj-balakan.jpg"):
+    title, desc = title.replace("\u2060", ""), desc.replace("\u2060", "")
+    jsonld = json.loads(json.dumps(jsonld, ensure_ascii=False).replace("\u2060", ""))
     url = BASE + "/" + path
     return f"""<!doctype html>
 <html lang="en">
