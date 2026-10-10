@@ -213,6 +213,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 #news .tl li{grid-template-columns:8.6rem minmax(0,1fr)}
 #news .tl li.one{grid-template-columns:8.6rem minmax(0,1fr) auto}
 @media (max-width:560px){#news .tl li,#news .tl li.one{grid-template-columns:1fr}}
+details.tgl summary{cursor:pointer;list-style:none}
+details.tgl summary::-webkit-details-marker{display:none}
+details.tgl .pm::after{content:"+";font-family:var(--f-mono);font-weight:400;color:var(--accent);margin-left:.3em}
+details.tgl[open] .pm::after{content:"−"}
+details.tgl summary:hover h2{color:var(--accent)}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -404,7 +409,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 <div class="skillgroup" style="margin-top:32px"><span class="mono">Honors</span><ul class="honors"><li>Chamran Postdoctoral Fellowship <span>· Iran National Elites Foundation, 2020</span></li><li>Outstanding PhD Thesis in Physics <span>· Nationwide award, Physical Society of Iran, 2019</span></li><li>Outstanding PhD Dissertation <span>· Physical Sciences, University of Tehran, 2019</span></li><li>INEF Graduate Scholarship <span>· Iran National Elites Foundation, 2016–18</span></li></ul></div>
 <p class="mono" style="text-transform:none;letter-spacing:0">Reviewer for Physical Review Letters, 2D Materials, Applied Physics Letters, Nanotechnology</p>
 </div>
-<div><div class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills</h2></div><div class="skillgroup"><span class="mono">Fabrication</span><div class="chips"><span>Cleanroom nanofabrication</span><span>Electron-beam lithography</span><span>Focused ion beam</span><span>Reactive ion etching</span><span>hBN encapsulation</span><span>PVD and e-beam evaporation</span><span>CVD and PECVD</span></div></div><div class="skillgroup"><span class="mono">Measurement</span><div class="chips"><span>Cryogenic quantum transport</span><span>Lock-in and low-noise measurement</span><span>Cryogenic filter design</span><span>Phase-sensitive flux measurement</span><span>SEM</span><span>AFM</span><span>Raman spectroscopy</span><span>Optoelectronic testing</span></div></div><div class="skillgroup"><span class="mono">Computation</span><div class="chips"><span>Python</span><span>Instrument automation</span><span>LabVIEW</span><span>Mathematica</span><span>KLayout mask design</span><span>Monte Carlo and COMSOL modeling</span></div></div>
+<div><details class="tgl"><summary class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills <span class="pm" aria-hidden="true"></span></h2></summary><div class="skillgroup"><span class="mono">Fabrication</span><div class="chips"><span>Cleanroom nanofabrication</span><span>Electron-beam lithography</span><span>Focused ion beam</span><span>Reactive ion etching</span><span>hBN encapsulation</span><span>PVD and e-beam evaporation</span><span>CVD and PECVD</span></div></div><div class="skillgroup"><span class="mono">Measurement</span><div class="chips"><span>Cryogenic quantum transport</span><span>Lock-in and low-noise measurement</span><span>Cryogenic filter design</span><span>Phase-sensitive flux measurement</span><span>SEM</span><span>AFM</span><span>Raman spectroscopy</span><span>Optoelectronic testing</span></div></div><div class="skillgroup"><span class="mono">Computation</span><div class="chips"><span>Python</span><span>Instrument automation</span><span>LabVIEW</span><span>Mathematica</span><span>KLayout mask design</span><span>Monte Carlo and COMSOL modeling</span></div></div></details>
 </div>
 </div></section>
 

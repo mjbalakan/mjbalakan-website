@@ -217,6 +217,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 #news .tl li{grid-template-columns:8.6rem minmax(0,1fr)}
 #news .tl li.one{grid-template-columns:8.6rem minmax(0,1fr) auto}
 @media (max-width:560px){#news .tl li,#news .tl li.one{grid-template-columns:1fr}}
+details.tgl summary{cursor:pointer;list-style:none}
+details.tgl summary::-webkit-details-marker{display:none}
+details.tgl .pm::after{content:"+";font-family:var(--f-mono);font-weight:400;color:var(--accent);margin-left:.3em}
+details.tgl[open] .pm::after{content:"−"}
+details.tgl summary:hover h2{color:var(--accent)}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -426,7 +431,7 @@ def build_index():
 <div class="skillgroup" style="margin-top:32px"><span class="mono">Honors</span><ul class="honors">{awards}</ul></div>
 {f'<p class="mono" style="text-transform:none;letter-spacing:0">Reviewer for {E(review["detail"])}</p>' if review else ''}
 </div>
-<div><div class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills</h2></div>{skills}
+<div><details class="tgl"><summary class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills <span class="pm" aria-hidden="true"></span></h2></summary>{skills}</details>
 </div>
 </div></section>
 
