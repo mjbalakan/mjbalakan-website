@@ -40,14 +40,14 @@ body{margin:0;background:#e9eaee;color:var(--ink);font:10.6pt/1.5 "Times New Rom
 a{color:var(--link)}
 a.plain{text-decoration:none}
 .dated{text-align:right;line-height:1.35;font-size:9.6pt}
-h1{font-weight:400;font-size:15.5pt;margin:14px 0 18px}
+h1{font-weight:400;font-size:15.5pt;margin:12px 0 14px}
 .loc{margin:0 0 16px}
 .addr{color:var(--grey);margin:0 0 16px;font-size:10pt;line-height:1.45}
 .contact{margin:0;font-size:10pt;line-height:1.5}
-h2{font-size:11pt;font-weight:700;margin:30px 0 14px;break-after:avoid}
+h2{font-size:11pt;font-weight:700;margin:26px 0 12px;break-after:avoid}
 .ind{padding-left:0.48in}
 .emp{margin-bottom:18px}
-.emp p,.edu p{margin:0;line-height:1.75}
+.emp p,.edu p{margin:0;line-height:1.6}
 .emp .sub{padding-left:0.24in}
 .edu{margin-bottom:16px}
 .edu .th{padding-left:0.52in;text-indent:-0.3in;line-height:1.5}
