@@ -225,7 +225,7 @@ details.tgl summary:hover h2{color:var(--accent)}
 #experience h2{font-size:clamp(1.25rem,2.2vw,1.5rem)}
 .etheme details p{margin-top:10px}
 .etheme details summary:hover h4{color:var(--accent)}
-.etheme .efacts{margin-top:4px}
+.etheme .efacts{margin-top:12px}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -365,9 +365,9 @@ def build_index():
         f'<li><a href="papers/{r["slug"]}.html"><span class="k">{r["k"]}</span><span class="t">{E(r["t"])}</span></a></li>'
         for r in sp["results"])
     facts = "".join(
-        f'<article class="etheme"><span class="mono">{E(t["span"])}</span><details class="tgl"><summary><h4>{E(t["title"])} <span class="pm" aria-hidden="true"></span></h4></summary><p>{E(t["text"])}</p></details><ul class="efacts">'
+        f'<article class="etheme"><span class="mono">{E(t["span"])}</span><details class="tgl"><summary><h4>{E(t["title"])} <span class="pm" aria-hidden="true"></span></h4></summary><p>{E(t["text"])}</p><ul class="efacts">'
         + "".join(f'<li><a href="papers/{f["slug"]}.html"><span class="k">{E(f["k"])}</span><span class="t">{E(f["t"])}</span></a></li>' for f in t["facts"])
-        + '</ul></article>' for t in ea["themes"])
+        + '</ul></details></article>' for t in ea["themes"])
     tl = "".join(
         f'<li><span class="when">{E(n["when"])}</span><span class="what"><span class="tag">{E(n["tag"])}</span>'
         + (f'<a href="papers/{n["slug"]}.html"><b>{E(n["title"])}</b></a>' if n.get("slug") else f'<b>{E(n["title"])}</b>')
