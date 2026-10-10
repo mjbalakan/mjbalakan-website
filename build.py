@@ -418,7 +418,7 @@ def build_index():
 <p>Each title opens a one-page summary with the key result, figure and links.</p></div>
 <ul class="pubs">{''.join(pub_item(p) for p in featured)}</ul>
 <details class="all"><summary>All {len(PAPERS)} papers and preprints</summary>
-<ul class="pubs">{''.join(pub_item(p) for p in rest)}</ul></details>
+<ul class="pubs">{''.join(pub_item(p) for p in sorted(PAPERS, key=lambda q: -q['year']))}</ul></details>
 </div></section>
 
 <section id="experience"><div class="wrap two-col">
