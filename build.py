@@ -377,7 +377,7 @@ def build_index():
         f'<li><span class="when">{E(n["when"])}</span><span class="what"><span class="tag">{E(n["tag"])}</span>'
         + (f'<a href="papers/{n["slug"]}.html"><b>{E(n["title"])}</b></a>' if n.get("slug") else f'<b>{E(n["title"])}</b>')
         + f'<span>{E(n["detail"])}</span></span></li>' for n in s["timeline"])
-    cv = "".join(f'<li><span class="when">{E(n["when"])}</span><span class="what"><b>{E(n["title"])}</b><span>{E(n["detail"])}</span></span></li>' for n in s["career"])
+    cv = "".join(f'<li><span class="when">{E(n["when"])}</span><span class="what"><b>{E(n["title"])}</b><span>{E(n["detail"]).replace(chr(10),"<br>")}</span></span></li>' for n in s["career"])
     skills = "".join(f'<div class="skillgroup"><span class="mono">{E(g["group"])}</span><div class="chips">{"".join(f"<span>{E(x)}</span>" for x in g["items"])}</div></div>' for g in s["skills"])
     awards = "".join(f'<li>{E(a["title"])} <span>· {", ".join(E(x) for x in (a.get("org"), a["year"]) if x)}</span></li>' for a in CV["awards"] if a.get("web"))
     review = {"detail": CV["web_reviewer"]} if CV.get("web_reviewer") else None
