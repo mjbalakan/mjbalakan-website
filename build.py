@@ -5,7 +5,7 @@ Edit data/papers.json or data/site.json, then run:  python3 build.py
 Outputs: index.html, papers/<slug>.html, sitemap.xml, robots.txt, 404.html
 """
 import json, html, os, re, sys, datetime, pathlib
-import cv_build
+import cv_build, cv_academic
 
 ROOT = pathlib.Path(__file__).resolve().parent
 SITE = json.loads((ROOT / "data/site.json").read_text().replace("Fe(Te,Se)", "Fe(Te,\u2060Se)"))
@@ -522,6 +522,8 @@ def main():
     (out / "404.html").write_text(nf)
     cv_build.build_cv(ROOT, SITE, PAPERS)
     pdf = cv_build.make_pdf(ROOT) if "--no-pdf" not in sys.argv else False
+    cv_academic.build(ROOT, SITE, PAPERS)
+    if pdf: cv_academic.make_pdf(ROOT, SITE)
     print(f"Built index + {len(PAPERS)} paper pages + cv.html" + (" + CV PDF" if pdf else ""))
 
 if __name__ == "__main__":

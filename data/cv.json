@@ -162,7 +162,7 @@
   ],
   "conferences": [
     "<u>M. J. Balakan</u>, Half-integer winding of the order parameter and intrinsic magnetization of the superconducting condensate in mesoscopic Fe(Te,Se) devices, GRC Correlated Electron Systems (2026).",
-    "<u>M. J. Balakan</u>, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and JU. Lee, Topological superconductivity in Fe(Te,Se) mesoscopic devices, APS Global Meeting (2026).",
+    "<u>M. J. Balakan</u>, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and JU. Lee, Topological superconductivity in Fe(Te,Se) mesoscopic devices, APS Global Physics Summit (2026).",
     "Additional presentations at Iranian Physical Society meetings and nanostructured solar cell conferences (2014–2018)."
   ],
   "publication_order": [
@@ -188,5 +188,57 @@
     "local-collection-efficiency-nanocrystalline-solar-cells",
     "patterned-tio2-dye-sensitized-solar-cells",
     "monte-carlo-random-walk-confined-porous-tio2"
-  ]
+  ],
+  "academic": {
+    "position": "Research Scientist",
+    "location": "San Jose, CA",
+    "status": "U.S. permanent resident",
+    "interests": "Experimental condensed-matter physics of quantum materials and mesoscopic devices: topological superconductivity, flux quantization and phase-coherent transport for fault-tolerant quantum computing; earlier work on 2D-material and hybrid organic–silicon devices for optoelectronics and photovoltaics.",
+    "appointments": [
+      {
+        "when": "2026 – present",
+        "role": "Research Scientist",
+        "org": "Stealth-mode startup, Bay Area, CA"
+      },
+      {
+        "when": "2022 – 2026",
+        "role": "Research Scientist (2025 – 2026); Postdoctoral Fellow (2022 – 2024)",
+        "org": "College of Nanotechnology, Science, and Engineering (CNSE), State University of New York at Albany",
+        "note": "Group of Prof. Ji Ung Lee · Topological superconductors for fault-tolerant quantum computation",
+        "research": 0
+      },
+      {
+        "when": "2019 – 2021",
+        "role": "Postdoctoral Associate",
+        "org": "Department of Physics, University of Tehran, Iran",
+        "note": "Group of Prof. Yaser Abdi · CMOS-compatible solid-state devices based on 2D materials",
+        "research": 1
+      },
+      {
+        "when": "Mar. – Sep. 2018",
+        "role": "Visiting Researcher",
+        "org": "Department of Physics, Sapienza Università di Roma, Italy",
+        "note": "Supervisor: Prof. Giorgio Parisi · Statistical properties of harmonic spheres near jamming"
+      }
+    ],
+    "graduate_research": [
+      2,
+      3
+    ],
+    "skills": [
+      {
+        "label": "Fabrication",
+        "text": "cleanroom nanofabrication and process development; EBL, FIB, RIE; PVD, e-beam evaporation, CVD, PECVD; 2D materials and hBN encapsulation."
+      },
+      {
+        "label": "Measurement",
+        "text": "cryogenic quantum transport; low-noise lock-in and phase-sensitive flux measurements; cryogenic filter design; SEM, AFM, Raman; optoelectronic characterization."
+      },
+      {
+        "label": "Computation",
+        "text": "Python, Mathematica, LabVIEW, KLayout; instrument automation; Monte Carlo and COMSOL modeling."
+      }
+    ],
+    "references": "Available upon request."
+  }
 }

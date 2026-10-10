@@ -22,7 +22,11 @@
     "cv": {
       "authors": "M. J. Balakan, S. Heidari, G. Gu, Q. Li, K. Watanabe, T. Taniguchi, and J. U. Lee",
       "tail": "will be published in Phys. Rev. B. Letters (2026)",
-      "badge": "Editors’ suggestion"
+      "badge": "Editors’ suggestion",
+      "accepted": {
+        "journal": "Physical Review B",
+        "note": "(Letter), accepted"
+      }
     }
   },
   {
@@ -265,7 +269,7 @@
       "authors": "M. Javadi, M. Gholami, H. Torbatiyan, Y. Abdi",
       "journal": "Applied Physics Letters",
       "ref": "112, 113302",
-      "badge": "Editors’ Pick"
+      "badge": "Editor’s Pick"
     }
   },
   {
@@ -284,7 +288,7 @@
     ],
     "cv": {
       "authors": "M. Javadi, M. Gholami, Y. Abdi",
-      "journal": "Journal of Material Chemistry C",
+      "journal": "Journal of Materials Chemistry C",
       "ref": "6, 8444"
     }
   },
