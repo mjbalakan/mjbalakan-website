@@ -195,7 +195,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 @media (max-width:820px){.spot,.earlier{grid-template-columns:1fr}.lab img{aspect-ratio:1.5}}
 @media (max-width:480px){.facts{grid-template-columns:1fr}.visual{grid-template-columns:1fr}.results a{grid-template-columns:4.4rem minmax(0,1fr)}}
 
-.statline{margin-top:26px;padding-top:14px;border-top:1px dashed var(--line);color:var(--muted);font-size:.86rem;font-variant-numeric:tabular-nums}
+.statline{margin-top:26px;padding-top:40px;border-top:1px dashed var(--line);color:var(--muted);font-size:.86rem;font-variant-numeric:tabular-nums}
 .lead .ai{font-weight:inherit;font-size:1.15em}
 .spot{align-items:start}
 .spot .side{display:flex;flex-direction:column;gap:10px;min-width:0}
