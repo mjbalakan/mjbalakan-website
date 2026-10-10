@@ -130,7 +130,7 @@
   "spotlight": {
     "span": "2022 – 2026",
     "title": "Topological\nsuperconductivity\nfor quantum\ncomputing",
-    "text": "Topological superconductors combine the quantum coherence of a superconductor with the protection of topology. They can host Majorana modes, the building blocks of qubits that are far less prone to errors. Proving that a material is a topological superconductor is hard, because its exotic states are hidden beneath a superconducting bulk. The iron-based superconductor FeTeSe is one of the most promising candidates. We fabricate fully encapsulated ring devices, a few hundred nanometers across, and probe them with low-noise, phase-sensitive measurements at a few kelvin. A ring architecture forces the superconducting wavefunction to wind around a closed loop, leading to flux quantization inside the ring. Such quantization can reveal the condensate's topological phase, its complex spin texture, and other associated exotic properties.",
+    "text": "Topological superconductors combine the quantum coherence of a superconductor with the protection of topology. They can host Majorana modes, the building blocks of qubits that are far less prone to errors. Proving that a material is a topological superconductor is hard, because its exotic states are hidden beneath a superconducting bulk. The iron-based superconductor Fe(Te,Se) is one of the most promising candidates. We fabricate fully encapsulated ring devices, a few hundred nanometers across, and probe them with low-noise, phase-sensitive measurements at a few kelvin. A ring architecture forces the superconducting wavefunction to wind around a closed loop, leading to flux quantization inside the ring. Such quantization can reveal the condensate's topological phase, its complex spin texture, and other associated exotic properties.",
     "results": [
       {
         "k": "Φ₀/2",
@@ -230,16 +230,16 @@
   "timeline": [
     {
       "when": "July 2026",
-      "tag": "Invited talk",
-      "title": "Gordon Research Conference",
-      "detail": "Correlated Electron Systems, Mount Holyoke College, MA"
-    },
-    {
-      "when": "June 2026",
       "tag": "Editors' Suggestion",
       "title": "Paper accepted in Physical Review B as a Letter",
       "detail": "Intrinsic magnetization of the superconducting condensate in Fe(Te,Se)",
       "slug": "intrinsic-magnetization-fete-se"
+    },
+    {
+      "when": "June 2026",
+      "tag": "Invited talk",
+      "title": "Gordon Research Conference",
+      "detail": "Correlated Electron Systems, Mount Holyoke College, MA"
     },
     {
       "when": "March 2026",

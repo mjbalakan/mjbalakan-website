@@ -8,7 +8,7 @@ import json, html, os, re, sys, datetime, pathlib
 import cv_build
 
 ROOT = pathlib.Path(__file__).resolve().parent
-SITE = json.loads((ROOT / "data/site.json").read_text())
+SITE = json.loads((ROOT / "data/site.json").read_text().replace("Fe(Te,Se)", "Fe(Te,\u2060Se)"))
 _raw = (ROOT / "data/papers.json").read_text()
 # keep "Fe(Te,Se)" on one line: a word joiner after the comma stops browsers breaking there
 PAPERS = json.loads(_raw.replace("Fe(Te,Se)", "Fe(Te,\u2060Se)"))
