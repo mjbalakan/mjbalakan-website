@@ -198,7 +198,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .spot{align-items:start}
 .spot .side{display:flex;flex-direction:column;gap:10px;min-width:0}
 .spot .side .results{margin:0}
-.lab img{opacity:.5}
+.lab img{opacity:.85}
 .earlier2{margin-top:clamp(40px,6vw,72px);padding-top:clamp(28px,4vw,40px);border-top:1px solid var(--line);display:grid;gap:24px}
 .earlier2 .txt{display:flex;flex-direction:column;gap:10px;max-width:70ch}
 .earlier2 .txt h3{font-size:1.35rem}
@@ -226,6 +226,9 @@ details.tgl summary:hover h2{color:var(--accent)}
 .etheme details p{margin-top:10px}
 .etheme details summary:hover h4{color:var(--accent)}
 .etheme .efacts{margin-top:12px}
+.lab2{margin-top:clamp(36px,5vw,56px)}
+.lab2 img{aspect-ratio:2.6;object-position:50% 40%}
+@media (max-width:820px){.lab2 img{aspect-ratio:1.6}}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -410,7 +413,6 @@ def build_index():
 </div>
 <div class="side"><span class="mono">Key results</span><ul class="results">{results}</ul></div>
 </div>
-<figure class="lab"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112" loading="lazy"><figcaption>{E(lab['cap'])}</figcaption></figure>
 <div class="earlier2">
 <div class="txt"><span class="mono">{E(ea['span'])}</span><h3>{E(ea['title'])}</h3><p>{E(ea['text'])}</p></div>
 <div class="ethemes">{facts}</div>
@@ -445,7 +447,9 @@ def build_index():
 <div class="email"><code id="em">{E(s['email'])}</code><button class="copy" type="button" data-copy="em">Copy email</button>
 <a class="btn" href="mailto:{E(s['email'])}">Write an email</a></div></div>
 <div><span class="mono">Profiles</span><ul class="plist" style="margin-top:10px">{profiles}</ul></div>
-</div></section>
+</div>
+<div class="wrap"><figure class="lab lab2"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112"><figcaption>{E(lab['cap'])}</figcaption></figure></div>
+</section>
 </main>
 {footer()}
 <script>{FIELD_JS}{COPY_JS}</script>
