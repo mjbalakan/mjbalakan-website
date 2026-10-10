@@ -210,6 +210,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .efacts .t{font-size:.88rem;color:var(--fg)}
 .efacts a:hover .t{color:var(--accent)}
 .pub h3{text-wrap:wrap}
+#news .tl li{grid-template-columns:8.6rem minmax(0,1fr)}
+#news .tl li.one{grid-template-columns:8.6rem minmax(0,1fr) auto}
+@media (max-width:560px){#news .tl li,#news .tl li.one{grid-template-columns:1fr}}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -273,7 +276,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <section id="news"><div class="wrap">
 <div class="sec-head"><span class="mono">Recognition & news</span><h2>Recent</h2></div>
-<ul class="tl"><li><span class="when">2026</span><span class="what"><span class="tag">Editors&#x27; Suggestion</span><a href="papers/intrinsic-magnetization-fete-se.html"><b>Paper accepted in Physical Review B as a Letter</b></a><span>Intrinsic magnetization of the superconducting condensate in Fe(Te,Se)</span></span></li><li><span class="when">2026</span><span class="what"><span class="tag">Invited talk</span><b>Gordon Research Conference</b><span>Correlated Electron Systems, Mount Holyoke College, MA</span></span></li><li><span class="when">2026</span><span class="what"><span class="tag">Talk</span><b>APS Global Physics Summit</b><span>Topological superconductivity in Fe(Te,Se) mesoscopic devices</span></span></li><li><span class="when">2025</span><span class="what"><span class="tag">Invited talk</span><b>Laboratory for Physical Sciences</b><span>Topological superconductivity in Fe(Te,Se), College Park, MD</span></span></li><li><span class="when">2025</span><span class="what"><span class="tag">Preprints</span><a href="papers/aharonov-bohm-spin-polarized-edge-transport.html"><b>Half-quantum vorticity and edge transport in Fe(Te,Se)</b></a><span>Two preprints on arXiv</span></span></li></ul>
+<ul class="tl"><li><span class="when">July 2026</span><span class="what"><span class="tag">Invited talk</span><b>Gordon Research Conference</b><span>Correlated Electron Systems, Mount Holyoke College, MA</span></span></li><li><span class="when">June 2026</span><span class="what"><span class="tag">Editors&#x27; Suggestion</span><a href="papers/intrinsic-magnetization-fete-se.html"><b>Paper accepted in Physical Review B as a Letter</b></a><span>Intrinsic magnetization of the superconducting condensate in Fe(Te,Se)</span></span></li><li><span class="when">March 2026</span><span class="what"><span class="tag">Talk</span><b>APS Global Physics Summit</b><span>Topological superconductivity in Fe(Te,Se) mesoscopic devices</span></span></li><li><span class="when">September 2025</span><span class="what"><span class="tag">Invited talk</span><b>Laboratory for Physical Sciences</b><span>Topological superconductivity in Fe(Te,Se), College Park, MD</span></span></li><li><span class="when">August 2025</span><span class="what"><span class="tag">Preprint</span><a href="papers/aharonov-bohm-spin-polarized-edge-transport.html"><b>Aharonov–Bohm interference from coherent spin-polarized edge transport</b></a><span>arXiv:2508.05030</span></span></li><li><span class="when">May 2025</span><span class="what"><span class="tag">Preprint</span><a href="papers/half-quantum-vorticity-iron-based-superconductor.html"><b>Observation of half-quantum vorticity in an iron-based superconductor</b></a><span>arXiv:2505.01522</span></span></li></ul>
 </div></section>
 
 <section id="publications"><div class="wrap">

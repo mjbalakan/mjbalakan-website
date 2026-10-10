@@ -210,6 +210,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .efacts .t{font-size:.88rem;color:var(--fg)}
 .efacts a:hover .t{color:var(--accent)}
 .pub h3{text-wrap:wrap}
+#news .tl li{grid-template-columns:8.6rem minmax(0,1fr)}
+#news .tl li.one{grid-template-columns:8.6rem minmax(0,1fr) auto}
+@media (max-width:560px){#news .tl li,#news .tl li.one{grid-template-columns:1fr}}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}

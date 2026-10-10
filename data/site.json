@@ -251,36 +251,43 @@
   },
   "timeline": [
     {
-      "when": "2026",
+      "when": "July 2026",
+      "tag": "Invited talk",
+      "title": "Gordon Research Conference",
+      "detail": "Correlated Electron Systems, Mount Holyoke College, MA"
+    },
+    {
+      "when": "June 2026",
       "tag": "Editors' Suggestion",
       "title": "Paper accepted in Physical Review B as a Letter",
       "detail": "Intrinsic magnetization of the superconducting condensate in Fe(Te,Se)",
       "slug": "intrinsic-magnetization-fete-se"
     },
     {
-      "when": "2026",
-      "tag": "Invited talk",
-      "title": "Gordon Research Conference",
-      "detail": "Correlated Electron Systems, Mount Holyoke College, MA"
-    },
-    {
-      "when": "2026",
+      "when": "March 2026",
       "tag": "Talk",
       "title": "APS Global Physics Summit",
       "detail": "Topological superconductivity in Fe(Te,Se) mesoscopic devices"
     },
     {
-      "when": "2025",
+      "when": "September 2025",
       "tag": "Invited talk",
       "title": "Laboratory for Physical Sciences",
       "detail": "Topological superconductivity in Fe(Te,Se), College Park, MD"
     },
     {
-      "when": "2025",
-      "tag": "Preprints",
-      "title": "Half-quantum vorticity and edge transport in Fe(Te,Se)",
-      "detail": "Two preprints on arXiv",
+      "when": "August 2025",
+      "tag": "Preprint",
+      "title": "Aharonov–Bohm interference from coherent spin-polarized edge transport",
+      "detail": "arXiv:2508.05030",
       "slug": "aharonov-bohm-spin-polarized-edge-transport"
+    },
+    {
+      "when": "May 2025",
+      "tag": "Preprint",
+      "title": "Observation of half-quantum vorticity in an iron-based superconductor",
+      "detail": "arXiv:2505.01522",
+      "slug": "half-quantum-vorticity-iron-based-superconductor"
     }
   ]
 }
