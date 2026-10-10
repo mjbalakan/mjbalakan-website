@@ -103,8 +103,8 @@ def build_cv(root, site, papers):
 <div class="dated">{E(cv['updated'])}<br>{E(cv['status_note'])}</div>
 <h1>{E(site['name'])}</h1>
 <p class="loc">Location: {E(cv['location'])}</p>
-<p class="addr">{'<br>'.join(E(a) for a in cv['address'])}</p>
-<p class="contact">Phone: {E(cv['phone'])}<br>Email: {E(site['email'])}<br>Homepage: <a href="{E(site['url'])}">{E(home)}</a></p>
+{('<p class="addr">' + '<br>'.join(E(a) for a in cv['address']) + '</p>') if cv.get('address') else ''}
+<p class="contact">{('Phone: ' + E(cv['phone']) + '<br>') if cv.get('phone') else ''}Email: {E(site['email'])}<br>Homepage: <a href="{E(site['url'])}">{E(home)}</a></p>
 
 <h2>Employment History</h2>{emp}
 <h2>Education</h2>{edu}
