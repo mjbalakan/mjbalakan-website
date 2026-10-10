@@ -207,7 +207,8 @@
       "Position sensitivity above 100 mV/mm.",
       "Nonlinearity below 3% and response correlation above 0.995.",
       "Response time under 4 ms for infrared illumination."
-    ]
+    ],
+    "featured": true
   },
   {
     "slug": "tio2-mos2-rgo-infrared-position-sensitive-detectors",
