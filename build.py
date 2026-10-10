@@ -423,10 +423,10 @@ def build_index():
 
 <section id="experience"><div class="wrap two-col">
 <div><div class="sec-head"><span class="mono">Experience</span><h2>Career & education</h2></div><ul class="tl">{cv}</ul>
-<p style="margin-top:18px"><a href="files/MJBalakan_CV.pdf">Full CV (PDF)</a></p></div>
-<div><div class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills</h2></div>{skills}
-<div class="skillgroup"><span class="mono">Honors</span><ul class="honors">{awards}</ul></div>
+<div class="skillgroup" style="margin-top:32px"><span class="mono">Honors</span><ul class="honors">{awards}</ul></div>
 {f'<p class="mono" style="text-transform:none;letter-spacing:0">Reviewer for {E(review["detail"])}</p>' if review else ''}
+</div>
+<div><div class="sec-head"><span class="mono">Toolkit</span><h2>Hands-on skills</h2></div>{skills}
 </div>
 </div></section>
 
