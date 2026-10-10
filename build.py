@@ -196,7 +196,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .spot{align-items:start}
 .spot .side{display:flex;flex-direction:column;gap:10px;min-width:0}
 .spot .side .results{margin:0}
-.lab img{opacity:.7}
+.lab img{opacity:.5}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
