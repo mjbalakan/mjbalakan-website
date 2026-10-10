@@ -198,7 +198,7 @@
         "facts": [
           {
             "k": "10⁶×",
-            "t": "slower charge transfer than gold–silicon contacts",
+            "t": "slower charge transfer than gold–silicon Schottky contacts",
             "slug": "graphene-silicon-schottky-kinetics"
           },
           {
@@ -233,7 +233,7 @@
       {
         "span": "2014 – 2018",
         "title": "Solar cells and physical modeling",
-        "text": "Monte Carlo simulations showed that confining a porous oxide network steers electrons toward the collecting electrode. We then built column-structured dye-sensitized solar cells and measured longer electron lifetimes and diffusion lengths. With COMSOL and numerical models, we also explained how plasma growth produces self-organized, single-standing carbon nanotubes.",
+        "text": "Our monte Carlo simulations showed that confining a porous oxide network steers electrons toward the collecting electrode. We then built column-structured dye-sensitized solar cells and measured longer electron lifetimes and diffusion lengths. With COMSOL and numerical models, we also explained how plasma-enhanced CVD produces self-organized, single-standing carbon nanotubes.",
         "facts": [
           {
             "k": "~3×",
