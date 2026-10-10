@@ -205,7 +205,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .earlier2 .txt p{color:var(--muted)}
 .ethemes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 @media (max-width:980px){.ethemes{grid-template-columns:1fr}}
-.etheme{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.etheme{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0;align-self:start}
 .etheme h4{margin:0;font-family:var(--f-body);font-weight:600;font-size:1.05rem;line-height:1.3}
 .etheme p{color:var(--muted);font-size:.93rem;line-height:1.55;flex:1}
 .efacts{list-style:none;margin:6px 0 0;padding:0;display:grid}
@@ -223,6 +223,9 @@ details.tgl .pm::after{content:"+";font-family:var(--f-mono);font-weight:400;col
 details.tgl[open] .pm::after{content:"−"}
 details.tgl summary:hover h2{color:var(--accent)}
 #experience h2{font-size:clamp(1.25rem,2.2vw,1.5rem)}
+.etheme details p{margin-top:10px}
+.etheme details summary:hover h4{color:var(--accent)}
+.etheme .efacts{margin-top:4px}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
@@ -362,7 +365,7 @@ def build_index():
         f'<li><a href="papers/{r["slug"]}.html"><span class="k">{r["k"]}</span><span class="t">{E(r["t"])}</span></a></li>'
         for r in sp["results"])
     facts = "".join(
-        f'<article class="etheme"><span class="mono">{E(t["span"])}</span><h4>{E(t["title"])}</h4><p>{E(t["text"])}</p><ul class="efacts">'
+        f'<article class="etheme"><span class="mono">{E(t["span"])}</span><details class="tgl"><summary><h4>{E(t["title"])} <span class="pm" aria-hidden="true"></span></h4></summary><p>{E(t["text"])}</p></details><ul class="efacts">'
         + "".join(f'<li><a href="papers/{f["slug"]}.html"><span class="k">{E(f["k"])}</span><span class="t">{E(f["t"])}</span></a></li>' for f in t["facts"])
         + '</ul></article>' for t in ea["themes"])
     tl = "".join(
