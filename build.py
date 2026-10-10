@@ -328,7 +328,7 @@ def nav(depth):
     return f"""<nav class="nav" aria-label="Main"><div class="wrap">
 <a class="brand" href="{depth}">MJ <span>Balakan</span></a>
 <ul><li><a href="{h}#research">Research</a></li><li class="hide-s"><a href="{h}#publications">Publications</a></li>
-<li class="hide-s"><a href="{h}#news">News</a></li><li class="hide-s"><a href="{h}#experience">Experience</a></li><li><a href="{depth}cv.html">CV</a></li><li><a href="{h}#contact">Contact</a></li></ul>
+<li class="hide-s"><a href="{h}#news">News</a></li><li class="hide-s"><a href="{h}#experience">Experience</a></li><li><a href="{depth}cv.html" target="_blank" rel="noopener">CV</a></li><li><a href="{h}#contact">Contact</a></li></ul>
 </div></nav>"""
 
 def footer():
