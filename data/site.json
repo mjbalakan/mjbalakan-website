@@ -152,16 +152,16 @@
   "spotlight": {
     "span": "2022 – present",
     "title": "Topological\nsuperconductivity\nfor quantum\ncomputing",
-    "text": "Topological superconductors combine the quantum coherence of a superconductor with the protection of topology. They can host Majorana modes, the building blocks of qubits that resist errors by design. Proving that a material is a topological superconductor is hard, because its exotic states are hidden beneath a superconducting bulk. The iron-based superconductor FeTeSe is one of the most promising candidates. We fabricate fully encapsulated ring devices, a few hundred nanometers across, and probe them with low-noise, phase-sensitive measurements at a few kelvin. A ring forces the superconducting wavefunction to wind around a closed loop, leading to flux quantization. Such quantization can reveal the condensate's topological phase, its complex spin texture, and other associated exotic properties.",
+    "text": "Topological superconductors combine the quantum coherence of a superconductor with the protection of topology. They can host Majorana modes, the building blocks of qubits that are naturally more robust against errors. Proving that a material is a topological superconductor is hard, because its exotic states are hidden beneath a superconducting bulk. The iron-based superconductor FeTeSe is one of the most promising candidates. We fabricate fully encapsulated ring devices, a few hundred nanometers across, and probe them with low-noise, phase-sensitive measurements at a few kelvin. A ring architecture forces the superconducting wavefunction to wind around a closed loop, leading to flux quantization. Such quantization can reveal the condensate's topological phase, its complex spin texture, and other associated exotic properties.",
     "results": [
       {
         "k": "Φ₀/2",
-        "t": "Half-quantum flux oscillations, the signature of half-integer phase winding",
+        "t": "Half-integer quantization of magnetic flux, a hallmark of topological superconductivity",
         "slug": "half-integer-winding-order-parameter"
       },
       {
         "k": "h/e",
-        "t": "Coherent electron interference along the edges of a superconducting ring",
+        "t": "Coherent single-electron interference confined along the device edges",
         "slug": "aharonov-bohm-spin-polarized-edge-transport"
       },
       {
