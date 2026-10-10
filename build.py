@@ -213,6 +213,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .efacts .k{font-family:var(--f-display);font-weight:750;font-stretch:108%;color:var(--accent);white-space:nowrap}
 .efacts .t{font-size:.88rem;color:var(--fg)}
 .efacts a:hover .t{color:var(--accent)}
+.pub h3{text-wrap:wrap}
 /* paper page */
 .paper{padding-block:clamp(36px,6vw,72px)}
 .paper .crumb{margin-bottom:22px}
