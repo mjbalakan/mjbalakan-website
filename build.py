@@ -448,7 +448,7 @@ def build_index():
 <a class="btn" href="mailto:{E(s['email'])}">Write an email</a></div></div>
 <div><span class="mono">Profiles</span><ul class="plist" style="margin-top:10px">{profiles}</ul></div>
 </div>
-<div class="wrap"><figure class="lab lab2"><img src="img/{E(lab['src'])}" alt="{E(lab['alt'])}" width="1600" height="1112"><figcaption>{E(lab['cap'])}</figcaption></figure></div>
+{'<div class="wrap"><figure class="lab lab2"><img src="img/'+E(lab['src'])+'" alt="'+E(lab['alt'])+'" width="1600" height="1112"><figcaption>'+E(lab['cap'])+'</figcaption></figure></div>' if s.get('show_lab', True) else ''}
 </section>
 </main>
 {footer()}

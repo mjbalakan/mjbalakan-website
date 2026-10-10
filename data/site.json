@@ -289,5 +289,6 @@
       "detail": "arXiv:2505.01522",
       "slug": "half-quantum-vorticity-iron-based-superconductor"
     }
-  ]
+  ],
+  "show_lab": false
 }
