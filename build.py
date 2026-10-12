@@ -298,7 +298,7 @@ def links_of(p, depth="./"):
 
 CARD_META = ('<meta property="og:image:width" content="1200">\n'
              '<meta property="og:image:height" content="627">\n'
-             '<meta property="og:image:alt" content="Mohammad Javadi (MJ) Balakan, Experimental Physicist, Quantum Devices">\n')
+             '<meta property="og:image:alt" content="MJ Balakan, Experimental Physicist, Quantum Devices">\n')
 
 def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/share-card.jpg"):
     title, desc = title.replace("\u2060", ""), desc.replace("\u2060", "")
