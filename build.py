@@ -512,6 +512,17 @@ def build_paper(p):
 </body></html>"""
     return page
 
+# Cloudflare Web Analytics (cookieless visitor stats; dashboard at dash.cloudflare.com → Web Analytics).
+# Added after the PDFs are rendered, so PDF generation is never counted as a visit.
+BEACON = """<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "77d190a3534a499b81661087d97bf2cb"}'></script><!-- End Cloudflare Web Analytics -->"""
+
+def add_analytics(out):
+    pages = [out / "index.html", out / "404.html", out / "cv.html", out / "resume.html"] + sorted((out / "papers").glob("*.html"))
+    for f in pages:
+        t = f.read_text()
+        if "cloudflareinsights" not in t:
+            f.write_text(t.replace("</body>", BEACON + "\n</body>", 1))
+
 def main():
     out = ROOT
     (out / "papers").mkdir(exist_ok=True)
@@ -530,6 +541,7 @@ def main():
     if pdf: cv_academic.make_pdf(ROOT, SITE)
     cv_resume.build(ROOT, SITE, PAPERS)
     if pdf: cv_resume.make_pdf(ROOT)
+    add_analytics(out)
     print(f"Built index + {len(PAPERS)} paper pages + cv.html" + (" + CV PDF" if pdf else ""))
 
 if __name__ == "__main__":
