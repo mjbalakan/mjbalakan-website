@@ -296,7 +296,7 @@ def links_of(p, depth="./"):
     if p.get("arxiv"): out.append(f'<a href="https://arxiv.org/abs/{E(p["arxiv"])}" target="_blank" rel="noopener">arXiv:{E(p["arxiv"])}</a>')
     return out
 
-def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/mj-balakan.jpg"):
+def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/share-card.jpg"):
     title, desc = title.replace("\u2060", ""), desc.replace("\u2060", "")
     jsonld = json.loads(json.dumps(jsonld, ensure_ascii=False).replace("\u2060", ""))
     url = BASE + "/" + path
@@ -314,7 +314,10 @@ def head(title, desc, path, depth, jsonld, og_type="website", og_image="img/mj-b
 <meta property="og:description" content="{E(desc)}">
 <meta property="og:url" content="{E(url)}">
 <meta property="og:image" content="{E(BASE + '/' + og_image)}">
-<meta name="twitter:card" content="summary">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Mohammad Javadi (MJ) Balakan, Experimental Physicist, Quantum Devices">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0a0e1a">
 <link rel="icon" href="{depth}img/favicon.svg" type="image/svg+xml">
 {FONTS}
