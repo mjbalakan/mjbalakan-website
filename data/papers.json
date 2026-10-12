@@ -163,6 +163,26 @@
     }
   },
   {
+    "slug": "graphene-semiconductor-contact",
+    "year": 2020,
+    "title": "Graphene–semiconductor contact",
+    "authors": "M. Javadi",
+    "venue": "arXiv preprint",
+    "theme": "2d",
+    "arxiv": "2004.12313",
+    "summary": "A systematic treatment of graphene–semiconductor junctions. Because graphene has a finite density of states at the Fermi level, its internal potential breaks the Schottky–Mott limit and the barrier-height sum rule, so the junction behaves as a semimetal–semiconductor contact with features of both metal–semiconductor and semiconductor–semiconductor junctions.",
+    "findings": [
+      "Generalized interface equations that link junction properties to the carrier density in graphene.",
+      "The tunable barrier height is tied to junction capacitance, with the image-force effect included.",
+      "Experimental methods for measuring built-in potential, barrier height and capacitance.",
+      "Analysis of experimental data reveals a strong inversion layer at graphene–silicon interfaces."
+    ],
+    "cv": {
+      "authors": "M. Javadi",
+      "tail": "(2020) [arXiv:2004.12313]"
+    }
+  },
+  {
     "slug": "pedot-pss-silicon-photodiode-responsivity",
     "year": 2020,
     "title": "Ultrahigh photovoltage responsivity of PEDOT:PSS–silicon hybrid heterojunction photodiodes",
